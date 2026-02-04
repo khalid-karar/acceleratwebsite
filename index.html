@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    
+    <!-- Primary Meta Tags -->
+    <title>ACCELERAT | Financial Consulting & Audit Services in Saudi Arabia</title>
+    <meta name="title" content="ACCELERAT | Financial Consulting & Audit Services in Saudi Arabia" />
+    <meta name="description" content="ACCELERAT provides professional financial audit, digital audit, performance assessment, GRC consulting, and training services across Saudi Arabia, UAE, and the Middle East." />
+    <meta name="keywords" content="financial audit, digital audit, GRC consulting, risk management, compliance, Saudi Arabia, UAE, ACCELERAT 360, cybersecurity audit, performance audit" />
+    <meta name="author" content="ACCELERAT Consulting" />
+    <meta name="robots" content="index, follow" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://accelerat.sa/" />
+    <meta property="og:title" content="ACCELERAT | Financial Consulting & Audit Services" />
+    <meta property="og:description" content="Professional financial audit, digital audit, and GRC consulting services across Saudi Arabia and the Middle East." />
+    <meta property="og:image" content="/images/og-image.jpg" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:locale:alternate" content="ar_SA" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://accelerat.sa/" />
+    <meta property="twitter:title" content="ACCELERAT | Financial Consulting & Audit Services" />
+    <meta property="twitter:description" content="Professional financial audit, digital audit, and GRC consulting services across Saudi Arabia and the Middle East." />
+    <meta property="twitter:image" content="/images/og-image.jpg" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#003F32" />
+    <meta name="msapplication-TileColor" content="#003F32" />
+    
+    <!-- Preconnect for Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://cdn.tailwindcss.com" />
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Noto+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://accelerat.sa/" />
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "ACCELERAT Consulting",
+      "url": "https://accelerat.sa",
+      "logo": "https://accelerat.sa/images/logo.png",
+      "description": "Professional financial audit, digital audit, and GRC consulting services",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Riyadh",
+        "addressCountry": "SA"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+966-11-234-5678",
+        "contactType": "customer service",
+        "availableLanguage": ["English", "Arabic"]
+      },
+      "sameAs": [
+        "https://twitter.com/accelerat_sa",
+        "https://linkedin.com/company/accelerat",
+        "https://instagram.com/accelerat.sa"
+      ]
+    }
+    </script>
+
+    <style>
+      /* Base Styles */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      
+      body {
+        font-family: 'Montserrat', sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      
+      /* Arabic Font */
+      .font-arabic, [lang="ar"] body, [dir="rtl"] body {
+        font-family: 'Noto Sans Arabic', 'Montserrat', sans-serif;
+      }
+      
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #003F32;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #002c23;
+      }
+      
+      /* Dark Mode Scrollbar */
+      .dark ::-webkit-scrollbar-track {
+        background: #1a1a1a;
+      }
+      .dark ::-webkit-scrollbar-thumb {
+        background: #B5EDB6;
+      }
+      
+      /* Animations */
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      .animate-fadeIn {
+        animation: fadeIn 0.5s ease-out forwards;
+      }
+      
+      @keyframes slideIn {
+        from { opacity: 0; transform: translateX(-20px); }
+        to { opacity: 1; transform: translateX(0); }
+      }
+      .animate-slideIn {
+        animation: slideIn 0.5s ease-out forwards;
+      }
+      
+      /* Hide Scrollbar for Tab Navigation */
+      .scrollbar-hide {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+      .scrollbar-hide::-webkit-scrollbar {
+        display: none;
+      }
+      
+      /* Focus Styles for Accessibility */
+      *:focus-visible {
+        outline: 2px solid #003F32;
+        outline-offset: 2px;
+      }
+      
+      /* Reduced Motion */
+      @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+        }
+      }
+      
+      /* Print Styles */
+      @media print {
+        .no-print { display: none !important; }
+        body { font-size: 12pt; }
+        a[href]::after { content: " (" attr(href) ")"; }
+      }
+    </style>
+
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              'cyber-emerald': '#003F32',
+              'digital-green': '#B5EDB6',
+              'soft-pearl': '#E9F5F3',
+              'shiny-red': '#FF4D4D',
+              'vibrant-blue': '#4477FF',
+              'golden-peach': '#FDC964',
+            },
+            fontFamily: {
+              sans: ['Montserrat', 'sans-serif'],
+              arabic: ['Noto Sans Arabic', 'sans-serif'],
+            },
+            animation: {
+              'fade-in': 'fadeIn 0.5s ease-out forwards',
+              'slide-in': 'slideIn 0.5s ease-out forwards',
+            }
+          }
+        }
+      }
+    </script>
+    
+    <script type="importmap">
+    {
+      "imports": {
+        "react": "https://esm.sh/react@^19.2.3",
+        "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+        "react/": "https://esm.sh/react@^19.2.3/",
+        "lucide-react": "https://esm.sh/lucide-react@^0.562.0"
+      }
+    }
+    </script>
+    <link rel="stylesheet" href="/index.css" />
+  </head>
+  <body class="bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
+    <!-- Loading Spinner (shown while React loads) -->
+    <div id="loading" style="position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:#003F32;z-index:9999;">
+      <div style="width:50px;height:50px;border:4px solid #B5EDB6;border-top-color:transparent;border-radius:50%;animation:spin 1s linear infinite;"></div>
+      <style>@keyframes spin{to{transform:rotate(360deg)}}</style>
+    </div>
+    
+    <div id="root"></div>
+    
+    <script type="module" src="/index.tsx"></script>
+    <script>
+      // Hide loading spinner when React is ready
+      window.addEventListener('load', () => {
+        setTimeout(() => {
+          const loader = document.getElementById('loading');
+          if (loader) loader.style.display = 'none';
+        }, 500);
+      });
+    </script>
+    
+    <!-- Noscript fallback -->
+    <noscript>
+      <div style="padding:40px;text-align:center;font-family:sans-serif;">
+        <h1>JavaScript Required</h1>
+        <p>Please enable JavaScript to view this website.</p>
+      </div>
+    </noscript>
+  </body>
+</html>
