@@ -16,7 +16,8 @@ const Hero: React.FC = () => {
     linkedin: 'https://accelerateconsulting.net/'
   };
 
-  const videoSrc = '/videos/hero-background.mp4';
+  //const videoSrc = '/videos/hero-background.mp4';
+  const videoSrc = 'https://drive.google.com/uc?export=download&id=1M9YNfuy9B_ITBB1ZjxC6TmrCECn8vyhg';
   const fallbackImage = '/images/homepage.jpg';
   //'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop'
 
