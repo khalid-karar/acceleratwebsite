@@ -147,7 +147,7 @@ export const pageContent = {
         title: "About Us",
         intro: "ACCELERAT is a leading consulting firm specialising in comprehensive governance, risk management and compliance solutions. Founded in 2021 as a strategic partnership with Al-Saeed Accountants, Auditors & Consultants, we combine deep expertise with innovation and an unwavering commitment to excellence.",
         credentials: {
-          title: "Our Credentials",
+          title: "Entities that are served by our Talented resources and Qualified Experts",
           items: [
             "Commercial Registration Number: 1010859758",
             "Professional License: 754",
@@ -310,25 +310,43 @@ export const pageContent = {
       metaTitle: "استراتيجيتنا - أكسيليريت",
       metaDescription: "اكتشف الخطة الاستراتيجية والأهداف التي توجه نمونا وتطورنا",
       title: "استراتيجيتنا والاتجاه الاستراتيجي",
-      intro: "استراتيجيتنا مركزة على ثلاثة أهداف استراتيجية رئيسية تعكس التزامنا بالنمو المستدام والابتكار والتوسع الإقليمي.",
+      intro: "استراتيجيتنا مركزة على ستة أهداف استراتيجية رئيسية تعكس التزامنا بالنمو المستدام والابتكار والتوسع الإقليمي.",
       objectives: [
         {
           number: "1",
           title: "الحوكمة وإدارة المخاطر المدعومة بالذكاء الاصطناعي",
-          description: "نطور أدوات وحلول متقدمة مدعومة بالذكاء الاصطناعي لتقديم تقييمات شاملة لحوكمة المنظمات وإدارة مخاطرها. أكسيليريت 360 هي المثال الأول على هذا الالتزام.",
-          focus: "التركيز على الأتمتة الذكية، التحليلات المتقدمة، والمعايرة العالمية"
+          description: "دمج الذكاء الاصطناعي والتعلم الآلي في تقييم المخاطر والامتثال وحلول الحوكمة.",
+          focus: ""
         },
         {
           number: "2",
           title: "التحول المؤسسي والابتكار الرقمي",
-          description: "نساعد المنظمات على تحقيق التحول الرقمي الحقيقي من خلال استشارات شاملة وتنفيذ استراتيجيات قابلة للقياس. نركز على تمكين المؤسسات للنمو والتطور.",
-          focus: "التركيز على تصميم الاستراتيجية الرقمية، تحسين العمليات، وتمكين التحول المستدام"
+          description: "دعم المؤسسات في الاستفادة من الذكاء الاصطناعي والأتمتة والاستراتيجيات المبنية على البيانات لتحقيق التميز التشغيلي.",
+          focus: ""
         },
         {
           number: "3",
           title: "التوسع الإقليمي والعالمي",
-          description: "نسعى للتوسع في الأسواق الخليجية والعربية والعالمية. مع وجود مكاتب في السعودية والإمارات ومصر، نبني حضوراً إقليمياً قوياً ونستهدف التوسع العالمي.",
-          focus: "التركيز على تقوية الحضور الخليجي، التوسع في الأسواق الناشئة، والشراكات العالمية"
+          description: "تعزيز حضورنا في منطقة الشرق الأوسط وشمال أفريقيا ودول الخليج والأسواق الدولية من خلال حلول استشارية مدعومة بالذكاء الاصطناعي.",
+          focus: ""
+        },
+        {
+          number: "4",
+          title: "تقديم خدمات مستقبلية",
+          description: "توفير خدمات التدقيق والتأكيد على الأمن السيبراني واكتشاف الاحتيال المدعومة بالذكاء الاصطناعي لتعزيز المرونة تجاه المخاطر.",
+          focus: ""
+        },
+        {
+          number: "5",
+          title: "تمكين المواهب وقيادة الذكاء الاصطناعي",
+          description: "الاستثمار في تطوير مهارات الذكاء الاصطناعي ومشاركة المعرفة والريادة الفكرية لإعادة تعريف الحوكمة وإدارة المخاطر والامتثال.",
+          focus: ""
+        },
+        {
+          number: "6",
+          title: "تعزيز الممارسات البيئية والاجتماعية المستدامة",
+          description: "مواءمة خدماتنا مع ممارسات الأعمال المستدامة وحوكمة الذكاء الاصطناعي والابتكار المسؤول لضمان التأثير طويل المدى.",
+          focus: ""
         }
       ],
       futureOutlook: {
@@ -340,25 +358,43 @@ export const pageContent = {
       metaTitle: "Our Strategy - ACCELERAT",
       metaDescription: "Discover our strategic plan and objectives that guide our growth and development.",
       title: "Our Strategic Direction",
-      intro: "Our strategy is focused on three key strategic objectives that reflect our commitment to sustainable growth, innovation and regional expansion.",
+      intro: "Our strategy is focused on six key strategic objectives that reflect our commitment to sustainable growth, innovation and regional expansion.",
       objectives: [
         {
           number: "1",
-          title: "AI-Powered Governance & Risk Management",
-          description: "We develop advanced tools and solutions powered by artificial intelligence to deliver comprehensive assessments of organisational governance and risk management. ACCELERAT 360 is our first example of this commitment.",
-          focus: "Focus on intelligent automation, advanced analytics and global benchmarking"
+          title: "AI-Driven Governance & Risk Management",
+          description: "Integrate artificial intelligence and machine learning into risk assessment, compliance, and governance solutions.",
+          focus: ""
         },
         {
           number: "2",
-          title: "Institutional Transformation & Digital Innovation",
-          description: "We help organisations achieve true digital transformation through comprehensive consulting and measurable strategy implementation. We focus on enabling institutions to grow and evolve.",
-          focus: "Focus on digital strategy design, process improvement and enabling sustainable transformation"
+          title: "Business Transformation & Digital Innovation",
+          description: "Support organizations in leveraging AI, automation, and data-driven strategies for operational excellence.",
+          focus: ""
         },
         {
           number: "3",
-          title: "Regional & Global Expansion",
-          description: "We aim to expand in Gulf, Arab and global markets. With offices in Saudi Arabia, UAE and Egypt, we are building strong regional presence and targeting global expansion.",
-          focus: "Focus on strengthening Gulf presence, expansion into emerging markets and global partnerships"
+          title: "Expand Regional & Global Reach",
+          description: "Strengthen our presence across MENA, GCC, and international markets with AI-powered advisory solutions.",
+          focus: ""
+        },
+        {
+          number: "4",
+          title: "Deliver Future-Ready Services",
+          description: "Provide AI-enabled auditing, cybersecurity assurance, and fraud detection for heightened risk resilience.",
+          focus: ""
+        },
+        {
+          number: "5",
+          title: "Empower Talent & AI Leadership",
+          description: "Invest in AI upskilling, knowledge-sharing, and thought leadership to redefine governance, risk, and compliance (GRC).",
+          focus: ""
+        },
+        {
+          number: "6",
+          title: "Promote ESG & Sustainable Practices",
+          description: "Align our services with sustainable business practices, AI governance, and responsible innovation to ensure long-term impact.",
+          focus: ""
         }
       ],
       futureOutlook: {

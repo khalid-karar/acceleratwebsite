@@ -108,7 +108,9 @@ const WhoWeAre: React.FC = () => {
               </h2>
               <div className="w-24 h-1 bg-cyber-emerald dark:bg-digital-green mb-8" />
               <p className="text-xl text-gray-700 dark:text-gray-300 leading-relaxed max-w-4xl">
-                {aboutContent.intro}
+                {lang === 'ar' 
+                  ? 'شركة مهنية مرخصة تحت رقم الترخيص 970494 للخدمات الاستشارية والاستشارية. تجمع بين الخبرة العميقة في التدقيق المالي والاستشارات والخدمات الاستشارية، لتشكل قوة دافعة في الحوكمة وإدارة المخاطر والتحول الاستراتيجي.'
+                  : 'A licensed professional firm under License No. 970494 of Consulting and Advisory Services. It brings deep-rooted expertise in financial auditing, advisory, and consulting, forming a powerhouse of governance, risk management, and strategic transformation.'}
               </p>
             </div>
 
@@ -119,41 +121,62 @@ const WhoWeAre: React.FC = () => {
                 </p>
                 <p className="text-lg leading-relaxed">
                   {lang === 'ar' 
-                    ? 'شركة استشارات رائدة متخصصة في تقديم حلول متكاملة للحوكمة وإدارة المخاطر والامتثال.'
-                    : 'A leading consulting firm specializing in comprehensive governance, risk management and compliance solutions.'}
+                    ? 'نحن أكثر من مجرد كيان استشاري؛ نحن محفزون للابتكار والمرونة والنجاح المستدام. مبنيون على أساس من الثقة والتميز والابتكار، نمكّن المؤسسات في منطقة الشرق الأوسط وشمال أفريقيا ودول الخليج من خلال تقديم حلول مدعومة بالذكاء الاصطناعي في الحوكمة والامتثال والأمن السيبراني والتحول الرقمي والاستدامة.'
+                    : 'We are more than a consulting entity; we catalyse innovation, resilience, and sustainable success. Built on a foundation of trust, excellence, and innovation, empowers organizations across the MENA and GCC regions by delivering AI-powered solutions in governance, compliance, cybersecurity, digital transformation, and ESG.'}
                 </p>
               </div>
 
               <div className="bg-gradient-to-br from-[#1a1a2e] to-[#16213e] text-white rounded-lg p-8 hover:shadow-xl transition-all">
                 <p className="text-xs font-bold tracking-widest opacity-70 mb-4">
-                  {lang === 'ar' ? 'رؤيتنا' : 'OUR VISION'}
+                  {lang === 'ar' ? 'فريقنا' : 'OUR TEAM'}
                 </p>
                 <p className="text-lg leading-relaxed">
-                  {missionContent.visionSection.statement}
+                  {lang === 'ar' 
+                    ? 'بفريق من المهنيين ذوي الخبرة العالية من خلفيات الشركات الأربع الكبرى والشركات الاستشارية العالمية، تقدم أكسيليريت خدمات مخصصة عالية التأثير تحقق نتائج قابلة للقياس. تقف الشركة كشريك موثوق للمؤسسات الخاصة والجهات الحكومية والهيئات التنظيمية والشركات الصغيرة والمتوسطة.'
+                    : 'With a team of highly experienced professionals from Big 4 backgrounds and global advisory firms, ACCELERAT provides tailored, high-impact services that drive measurable outcomes. The firm stands as a trusted partner to private enterprises, government institutions, regulatory bodies, and small and medium-sized enterprises (SMEs), offering a comprehensive portfolio of services that aligns with the highest standards of quality, integrity, and strategic insight.'}
                 </p>
               </div>
 
               <div className="bg-gradient-to-br from-[#2d3436] to-[#1e272e] text-white rounded-lg p-8 hover:shadow-xl transition-all">
                 <p className="text-xs font-bold tracking-widest opacity-70 mb-4">
-                  {lang === 'ar' ? 'مهمتنا' : 'OUR MISSION'}
+                  {lang === 'ar' ? 'التزامنا' : 'OUR COMMITMENT'}
                 </p>
                 <p className="text-lg leading-relaxed">
-                  {missionContent.missionSection.statement}
+                  {lang === 'ar' 
+                    ? 'سواء كان ذلك دعم الاستعداد للطرح العام الأولي، أو تحويل نماذج الأعمال، أو ضمان الامتثال التنظيمي، فإن أكسيليريت ملتزمة بتسريع النجاح وتشكيل مستقبل التميز في الأعمال في المملكة العربية السعودية وخارجها.'
+                    : 'Whether supporting IPO readiness, transforming business models, or ensuring regulatory compliance, ACCELERAT is committed to accelerating success and shaping the future of business excellence in Saudi Arabia and beyond.'}
                 </p>
               </div>
             </div>
 
             <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-8 border border-cyber-emerald/20">
-              <h3 className="text-2xl font-bold text-cyber-emerald dark:text-white mb-6">
-                {aboutContent.credentials.title}
+              <h3 className="text-2xl font-bold text-cyber-emerald dark:text-white mb-6 text-center">
+                {lang === 'ar' ? 'الجهات التي يخدمها كوادرنا وخبراؤنا المؤهلون' : 'Entities that are served by our Talented resources and Qualified Experts'}
               </h3>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                {aboutContent.credentials.items.map((item, idx) => (
-                  <div key={idx} className="flex items-center gap-3 p-4 bg-white dark:bg-gray-700 rounded-lg">
-                    <span className="text-cyber-emerald dark:text-digital-green text-2xl">✓</span>
-                    <span className="text-gray-700 dark:text-gray-300">{item}</span>
-                  </div>
-                ))}
+              <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 items-center justify-items-center">
+                {/* Row 1 */}
+                <img src="/images/clients/financial-audit-authority.png" alt="Financial Audit Authority" className="h-12 md:h-16 object-contain grayscale hover:grayscale-0 transition-all" />
+                <img src="/images/clients/rta.png" alt="RTA" className="h-12 md:h-16 object-contain grayscale hover:grayscale-0 transition-all" />
+                <img src="/images/clients/emirates.png" alt="Emirates" className="h-12 md:h-16 object-contain grayscale hover:grayscale-0 transition-all" />
+                <img src="/images/clients/dubai-health-authority.png" alt="Dubai Health Authority" className="h-12 md:h-16 object-contain grayscale hover:grayscale-0 transition-all" />
+                <img src="/images/clients/oman-investment-authority.png" alt="Oman Investment Authority" className="h-12 md:h-16 object-contain grayscale hover:grayscale-0 transition-all" />
+                <img src="/images/clients/modon.png" alt="MODON" className="h-12 md:h-16 object-contain grayscale hover:grayscale-0 transition-all" />
+                {/* Row 2 */}
+                <img src="/images/clients/government-of-dubai.png" alt="Government of Dubai" className="h-12 md:h-16 object-contain grayscale hover:grayscale-0 transition-all" />
+                <img src="/images/clients/emaar.png" alt="EMAAR" className="h-12 md:h-16 object-contain grayscale hover:grayscale-0 transition-all" />
+                <img src="/images/clients/oriental-weavers.png" alt="Oriental Weavers" className="h-12 md:h-16 object-contain grayscale hover:grayscale-0 transition-all" />
+                <img src="/images/clients/wafeer.png" alt="Wafeer" className="h-12 md:h-16 object-contain grayscale hover:grayscale-0 transition-all" />
+                <img src="/images/clients/indeal.png" alt="Indeal" className="h-12 md:h-16 object-contain grayscale hover:grayscale-0 transition-all" />
+                <img src="/images/clients/air-arabia.png" alt="Air Arabia" className="h-12 md:h-16 object-contain grayscale hover:grayscale-0 transition-all" />
+                {/* Row 3 */}
+                <img src="/images/clients/nadec.png" alt="NADEC" className="h-12 md:h-16 object-contain grayscale hover:grayscale-0 transition-all" />
+                <img src="/images/clients/etmaen.png" alt="Etmaen" className="h-12 md:h-16 object-contain grayscale hover:grayscale-0 transition-all" />
+                <img src="/images/clients/ministry-hr.png" alt="Ministry of Human Resources" className="h-12 md:h-16 object-contain grayscale hover:grayscale-0 transition-all" />
+                <img src="/images/clients/alyusr.png" alt="AlYusr" className="h-12 md:h-16 object-contain grayscale hover:grayscale-0 transition-all" />
+                <img src="/images/clients/real-estate-general-authority.png" alt="Real Estate General Authority" className="h-12 md:h-16 object-contain grayscale hover:grayscale-0 transition-all" />
+                <img src="/images/clients/t2.png" alt="T2 Business Simplified" className="h-12 md:h-16 object-contain grayscale hover:grayscale-0 transition-all" />
+                {/* Row 4 */}
+                <img src="/images/clients/al-rajhi-bank.png" alt="Al Rajhi Bank" className="h-12 md:h-16 object-contain grayscale hover:grayscale-0 transition-all" />
               </div>
             </div>
           </section>
@@ -266,7 +289,7 @@ const WhoWeAre: React.FC = () => {
 
             <div className="mb-12">
               <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
-                {lang === 'ar' ? 'الركائز الاستراتيجية' : 'Strategic Pillars'}
+                {lang === 'ar' ? 'الأهداف الاستراتيجية' : 'Strategic Objectives'}
               </h3>
               <div className="space-y-6">
                 {strategyContent.objectives.map((obj, idx) => (
