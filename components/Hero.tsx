@@ -18,7 +18,16 @@ const Hero: React.FC = () => {
 
   const videoSrc = '/videos/hero-background.mp4';
   const fallbackImage = '/images/homepage.jpg';
-  //'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop'
+
+  // Values bullet points
+  const valuesPoints = lang === 'ar' 
+    ? ['النزاهة والثقة', 'الابتكار', 'التميز', 'التعاون والريادة الفكرية', 'المرونة والتكيف', 'المسؤولية البيئية والاجتماعية']
+    : ['Integrity and Trust', 'Innovation', 'Excellence', 'Collaboration and Thought Leadership', 'Agility and Adaptability', 'ESG Responsibility'];
+
+  // Strategy bullet points
+  const strategyPoints = lang === 'ar'
+    ? ['الحوكمة وإدارة المخاطر بالذكاء الاصطناعي', 'التحول المؤسسي والابتكار الرقمي', 'التوسع الإقليمي والعالمي', 'تقديم خدمات مستقبلية', 'تمكين المواهب وقيادة الذكاء الاصطناعي', 'تعزيز الممارسات المستدامة']
+    : ['AI-Driven Governance & Risk Management', 'Business Transformation & Digital Innovation', 'Expand Regional & Global Reach', 'Deliver Future-Ready Services', 'Empower Talent & AI Leadership', 'Promote ESG & Sustainable Practices'];
 
   const toggleVideo = () => {
     if (videoRef.current) {
@@ -46,7 +55,6 @@ const Hero: React.FC = () => {
       <img 
         src={fallbackImage}
         alt="Corporate Infrastructure"
-        // FIX APPLIED: Added 'object-center' to fix the "Zoomed In" look
         className={`absolute inset-0 w-full h-full object-cover object-center transition-opacity duration-500 ${isPlaying ? 'opacity-0' : 'opacity-70'}`}
       />
 
@@ -54,7 +62,6 @@ const Hero: React.FC = () => {
       <video
         ref={videoRef}
         src={videoSrc}
-        // FIX APPLIED: Added 'object-center' here as well
         className={`absolute inset-0 w-full h-full object-cover object-center transition-opacity duration-500 ${isPlaying ? 'opacity-80' : 'opacity-0'}`}
         muted
         playsInline
@@ -119,17 +126,21 @@ const Hero: React.FC = () => {
                     <h3 className="text-2xl font-bold mb-3 text-digital-green tracking-tight">
                       {content.hero.values.title}
                     </h3>
-                    <p className={`text-sm leading-relaxed opacity-90 font-light ${lang === 'ar' ? 'border-r border-white/30 pr-4' : 'border-l border-white/30 pl-4'}`}>
-                      {content.hero.values.description}
-                    </p>
+                    <ul className={`text-sm leading-relaxed opacity-90 font-light space-y-1 ${lang === 'ar' ? 'border-r border-white/30 pr-4' : 'border-l border-white/30 pl-4'}`}>
+                      {valuesPoints.map((item, idx) => (
+                        <li key={idx}>• {item}</li>
+                      ))}
+                    </ul>
                 </div>
                 <div className="max-w-xs">
                     <h3 className="text-2xl font-bold mb-3 text-digital-green tracking-tight">
                       {content.hero.strategy.title}
                     </h3>
-                    <p className={`text-sm leading-relaxed opacity-90 font-light ${lang === 'ar' ? 'border-r border-white/30 pr-4' : 'border-l border-white/30 pl-4'}`}>
-                      {content.hero.strategy.description}
-                    </p>
+                    <ul className={`text-sm leading-relaxed opacity-90 font-light space-y-1 ${lang === 'ar' ? 'border-r border-white/30 pr-4' : 'border-l border-white/30 pl-4'}`}>
+                      {strategyPoints.map((item, idx) => (
+                        <li key={idx}>• {item}</li>
+                      ))}
+                    </ul>
                 </div>
             </div>
         </div>

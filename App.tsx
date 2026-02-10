@@ -9,15 +9,11 @@ import Footer from './components/Footer';
 import { LanguageProvider } from './context/LanguageContext';
 // Page imports
 import WhoWeAre from './pages/WhoWeAre';
-import EstablishmentLaw from './pages/EstablishmentLaw';
 import WhatWeDo from './pages/WhatWeDo';
-import FinancialAudit from './pages/FinancialAudit';
-import PerformanceAudit from './pages/PerformanceAudit';
-import DigitalAudit from './pages/DigitalAudit';
-import FAAcademy from './pages/FAAcademy';
+import AdvisoryServices from './pages/AdvisoryServices';
+import AssuranceServices from './pages/AssuranceServices';
+import ConsultingServices from './pages/ConsultingServices';
 import ConsultingAssessments from './pages/ConsultingAssessments';
-import OtherAudit from './pages/OtherAudit';
-import WhoWeAudit from './pages/WhoWeAudit';
 import Partnerships from './pages/Partnerships';
 import NewsEvents from './pages/NewsEvents';
 import ContactUs from './pages/ContactUs';
@@ -116,18 +112,11 @@ const App: React.FC = () => {
             <Route path="/who-we-are" element={<WhoWeAre />} />
             
             {/* All other pages - With Footer */}
-            <Route path="/search/establishment-law" element={<WithFooter><EstablishmentLaw /></WithFooter>} />
-            <Route path="/establishment-law" element={<WithFooter><EstablishmentLaw /></WithFooter>} />
             <Route path="/what-we-do" element={<WithFooter><WhatWeDo /></WithFooter>} />
-            <Route path="/financial-audit" element={<WithFooter><FinancialAudit /></WithFooter>} />
-            <Route path="/performance-audit" element={<WithFooter><PerformanceAudit /></WithFooter>} />
-            <Route path="/digital-audit" element={<WithFooter><DigitalAudit /></WithFooter>} />
-            <Route path="/faa-academy" element={<WithFooter><FAAcademy /></WithFooter>} />
-            <Route path="/fa-academy" element={<WithFooter><FAAcademy /></WithFooter>} />
-            <Route path="/consulting-assessments" element={<WithFooter><ConsultingAssessments /></WithFooter>} />
-            <Route path="/consulting" element={<WithFooter><ConsultingAssessments /></WithFooter>} />
-            <Route path="/other-audit" element={<WithFooter><OtherAudit /></WithFooter>} />
-            <Route path="/who-we-audit" element={<WithFooter><WhoWeAudit /></WithFooter>} />
+            <Route path="/advisory-services" element={<WithFooter><AdvisoryServices /></WithFooter>} />
+            <Route path="/assurance-services" element={<WithFooter><AssuranceServices /></WithFooter>} />
+            <Route path="/consulting-services" element={<WithFooter><ConsultingServices /></WithFooter>} />
+            <Route path="/accelerat-360" element={<WithFooter><ConsultingAssessments /></WithFooter>} />
             <Route path="/partnerships" element={<WithFooter><Partnerships /></WithFooter>} />
             <Route path="/news-events" element={<WithFooter><NewsEvents /></WithFooter>} />
             <Route path="/contact-us" element={<WithFooter><ContactUs /></WithFooter>} />

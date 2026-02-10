@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, Search, Moon, Sun, Monitor, X, ChevronDown, Instagram, Twitter, Linkedin, Volume2, StopCircle, ArrowRight } from 'lucide-react';
+import { Menu, Moon, Sun, Monitor, X, ChevronDown, Instagram, Twitter, Linkedin, Volume2, StopCircle, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { menuTranslations } from '../content/menuTranslations';
 
@@ -56,17 +56,6 @@ const NavBar: React.FC<NavBarProps> = ({
 
           {/* Right: Utilities */}
           <div className="flex items-center gap-6 text-sm font-medium">
-            <Link to="/search/establishment-law" className="flex items-center gap-2 hover:text-shiny-red transition-colors">
-              <span className="uppercase hidden md:inline font-bold tracking-wider">
-                {t.search}
-              </span>
-              <div className="bg-black/5 dark:bg-white/20 p-2 rounded-full">
-                <Search size={18} />
-              </div>
-            </Link>
-
-            <div className={`h-5 w-[1px] bg-current opacity-20 hidden md:block`}></div>
-
             <div className="relative">
               <button 
                 onClick={() => setIsLangDropdownOpen(!isLangDropdownOpen)}
@@ -157,10 +146,6 @@ const NavBar: React.FC<NavBarProps> = ({
                 </div>
 
                 <div className="mt-12 md:mt-0 hidden md:block">
-                     <button className="flex flex-col items-center gap-3 group text-cyber-emerald">
-                        <Search size={32} strokeWidth={1.5} className="group-hover:scale-110 transition-transform duration-300" />
-                        <span className="text-xs font-bold tracking-[0.2em] uppercase">Search</span>
-                     </button>
                 </div>
             </div>
 
@@ -203,10 +188,6 @@ const NavBar: React.FC<NavBarProps> = ({
                                     <li><Link to="/who-we-are#strategy" onClick={() => setIsMenuOpen(false)} className="hover:text-white cursor-pointer transition-colors w-fit">{t.ourStrategy}</Link></li>
                                 </ul>
                             </div>
-                            <div>
-                                <Link to="/search/establishment-law" onClick={() => setIsMenuOpen(false)} className="text-2xl font-bold mb-4 hover:text-digital-green cursor-pointer transition-colors inline-block">{t.establishmentLaw}</Link>
-                                <Link to="/search/establishment-law" onClick={() => setIsMenuOpen(false)} className="text-gray-400 text-sm font-medium hover:text-white cursor-pointer transition-colors w-fit block">{t.search}</Link>
-                            </div>
                         </div>
 
                         {/* Column 2 */}
@@ -214,20 +195,13 @@ const NavBar: React.FC<NavBarProps> = ({
                             <div>
                                 <Link to="/what-we-do" onClick={() => setIsMenuOpen(false)} className="text-2xl font-bold mb-4 hover:text-digital-green cursor-pointer transition-colors inline-block">{t.whatWeDo}</Link>
                                 <ul className="flex flex-col gap-3 text-gray-400 text-sm font-medium">
-                                    <li><Link to="/financial-audit" onClick={() => setIsMenuOpen(false)} className="hover:text-white cursor-pointer transition-colors w-fit">{t.financialAudit}</Link></li>
-                                    <li><Link to="/performance-audit" onClick={() => setIsMenuOpen(false)} className="hover:text-white cursor-pointer transition-colors w-fit">{t.performanceAudit}</Link></li>
-                                    <li><Link to="/digital-audit" onClick={() => setIsMenuOpen(false)} className="hover:text-white cursor-pointer transition-colors w-fit">{t.digitalAudit}</Link></li>
-                                    <li><Link to="/faa-academy" onClick={() => setIsMenuOpen(false)} className="hover:text-white cursor-pointer transition-colors w-fit">{t.faaAcademy}</Link></li>
-                                    <li><Link to="/consulting" onClick={() => setIsMenuOpen(false)} className="hover:text-white cursor-pointer transition-colors w-fit">{t.consultingAssessments}</Link></li>
-                                    <li><Link to="/other-audit" onClick={() => setIsMenuOpen(false)} className="hover:text-white cursor-pointer transition-colors w-fit">{t.otherAudit}</Link></li>
+                                    <li><Link to="/advisory-services" onClick={() => setIsMenuOpen(false)} className="hover:text-white cursor-pointer transition-colors w-fit">{lang === 'ar' ? 'الخدمات الاستشارية' : 'Advisory Services'}</Link></li>
+                                    <li><Link to="/assurance-services" onClick={() => setIsMenuOpen(false)} className="hover:text-white cursor-pointer transition-colors w-fit">{lang === 'ar' ? 'خدمات التأكيد' : 'Assurance Services'}</Link></li>
+                                    <li><Link to="/consulting-services" onClick={() => setIsMenuOpen(false)} className="hover:text-white cursor-pointer transition-colors w-fit">{lang === 'ar' ? 'خدمات الاستشارات' : 'Consulting Services'}</Link></li>
                                 </ul>
                             </div>
                             <div>
-                                <Link to="/who-we-audit" onClick={() => setIsMenuOpen(false)} className="text-2xl font-bold mb-4 hover:text-digital-green cursor-pointer transition-colors inline-block">{t.whoWeAudit}</Link>
-                                <ul className="flex flex-col gap-3 text-gray-400 text-sm font-medium">
-                                    <li><Link to="/who-we-audit" onClick={() => setIsMenuOpen(false)} className="hover:text-white cursor-pointer transition-colors w-fit">{t.auditUniverse}</Link></li>
-                                    <li className="hover:text-white cursor-pointer transition-colors w-fit">{t.sectors}</li>
-                                </ul>
+                                <Link to="/accelerat-360" onClick={() => setIsMenuOpen(false)} className="text-2xl font-bold mb-4 hover:text-digital-green cursor-pointer transition-colors inline-block">{lang === 'ar' ? 'أكسيليريت 360' : 'ACCELERAT 360'}</Link>
                             </div>
                         </div>
 

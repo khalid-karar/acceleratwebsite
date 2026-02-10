@@ -7,6 +7,15 @@ const Home: React.FC = () => {
   const { lang } = useLanguage();
   const content = pageContent.home[lang];
 
+  // Values and Strategy bullet points
+  const valuesPoints = lang === 'ar' 
+    ? ['النزاهة والثقة', 'الابتكار', 'التميز', 'التعاون والريادة الفكرية', 'المرونة والتكيف', 'المسؤولية البيئية والاجتماعية']
+    : ['Integrity and Trust', 'Innovation', 'Excellence', 'Collaboration and Thought Leadership', 'Agility and Adaptability', 'ESG Responsibility'];
+
+  const strategyPoints = lang === 'ar'
+    ? ['الحوكمة وإدارة المخاطر المدعومة بالذكاء الاصطناعي', 'التحول المؤسسي والابتكار الرقمي', 'التوسع الإقليمي والعالمي', 'تقديم خدمات مستقبلية', 'تمكين المواهب وقيادة الذكاء الاصطناعي', 'تعزيز الممارسات البيئية والاجتماعية المستدامة']
+    : ['AI-Driven Governance & Risk Management', 'Business Transformation & Digital Innovation', 'Expand Regional & Global Reach', 'Deliver Future-Ready Services', 'Empower Talent & AI Leadership', 'Promote ESG & Sustainable Practices'];
+
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -47,9 +56,14 @@ const Home: React.FC = () => {
                 <h3 className="text-cyber-emerald font-bold text-lg mb-3">
                   {content.hero.values.title}
                 </h3>
-                <p className="text-sm leading-relaxed opacity-90">
-                  {content.hero.values.description}
-                </p>
+                <ul className={`text-sm leading-relaxed opacity-90 space-y-2 ${lang === 'ar' ? 'pr-4' : 'pl-4'}`}>
+                  {valuesPoints.map((point, idx) => (
+                    <li key={idx} className="flex items-start gap-2">
+                      <span className="text-cyber-emerald mt-1">•</span>
+                      <span>{point}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
 
               {/* Strategy Box */}
@@ -57,9 +71,14 @@ const Home: React.FC = () => {
                 <h3 className="text-cyber-emerald font-bold text-lg mb-3">
                   {content.hero.strategy.title}
                 </h3>
-                <p className="text-sm leading-relaxed">
-                  {content.hero.strategy.description}
-                </p>
+                <ul className={`text-sm leading-relaxed space-y-2 ${lang === 'ar' ? 'pr-4' : 'pl-4'}`}>
+                  {strategyPoints.map((point, idx) => (
+                    <li key={idx} className="flex items-start gap-2">
+                      <span className="text-cyber-emerald mt-1">•</span>
+                      <span>{point}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
             </div>
           </div>

@@ -71,16 +71,47 @@ const Partnerships: React.FC = () => {
                 {content.keyPartnership.description}
               </p>
               
-              {/* Partner Highlight Box */}
-              <div className="bg-gradient-to-br from-cyber-emerald to-[#0a3d35] rounded-lg p-8 text-white">
-                <h3 className="text-2xl font-bold mb-4">
-                  {lang === 'ar' ? 'شركة السعيد للمحاسبين والمدققين والاستشاريين' : 'Al-Saeed Accountants, Auditors & Consultants'}
-                </h3>
-                <p className="text-white/80">
-                  {lang === 'ar'
-                    ? 'شريكنا الاستراتيجي بخبرة تمتد لعقود في السوق السعودي والخليجي'
-                    : 'Our strategic partner with decades of experience in the Saudi and Gulf markets'}
-                </p>
+              {/* Partner Highlight Boxes */}
+              <div className="space-y-6">
+                {/* Al-Saeed Partner Box */}
+                <div className="bg-gradient-to-br from-cyber-emerald to-[#0a3d35] rounded-lg p-8 text-white">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
+                      <span className="text-xl">📊</span>
+                    </div>
+                    <span className="text-sm font-bold tracking-widest opacity-70 uppercase">
+                      {lang === 'ar' ? 'الشريك الاستراتيجي' : 'Strategic Partner'}
+                    </span>
+                  </div>
+                  <h3 className="text-2xl font-bold mb-4">
+                    {lang === 'ar' ? 'شركة السعيد للمحاسبين والمدققين والاستشاريين' : 'Al-Saeed Accountants, Auditors & Consultants'}
+                  </h3>
+                  <p className="text-white/80">
+                    {lang === 'ar'
+                      ? 'شريكنا الاستراتيجي بخبرة تمتد لعقود في السوق السعودي والخليجي'
+                      : 'Our strategic partner with decades of experience in the Saudi and Gulf markets'}
+                  </p>
+                </div>
+
+                {/* Contact Point Partner Box */}
+                <div className="bg-gradient-to-br from-[#1a1a2e] to-[#16213e] rounded-lg p-8 text-white">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
+                      <span className="text-xl">🤖</span>
+                    </div>
+                    <span className="text-sm font-bold tracking-widest opacity-70 uppercase">
+                      {lang === 'ar' ? 'الذراع التقني والذكاء الاصطناعي' : 'Technical & AI Arm'}
+                    </span>
+                  </div>
+                  <h3 className="text-2xl font-bold mb-4">
+                    {lang === 'ar' ? 'شركة كونتاكت بوينت' : 'Contact Point Company'}
+                  </h3>
+                  <p className="text-white/80">
+                    {lang === 'ar'
+                      ? 'شريكنا التقني المتخصص في البنية التحتية للذكاء الاصطناعي والأمن السيبراني والتحول الرقمي'
+                      : 'Our technology partner specializing in AI infrastructure, cybersecurity, and digital transformation'}
+                  </p>
+                </div>
               </div>
             </div>
             
