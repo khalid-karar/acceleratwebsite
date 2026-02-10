@@ -114,40 +114,7 @@ const WhoWeAre: React.FC = () => {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-              <div className="bg-gradient-to-br from-cyber-emerald to-[#0a3d35] text-white rounded-lg p-8 hover:shadow-xl transition-all">
-                <p className="text-xs font-bold tracking-widest opacity-70 mb-4">
-                  {lang === 'ar' ? 'من نحن' : 'WHO WE ARE'}
-                </p>
-                <p className="text-lg leading-relaxed">
-                  {lang === 'ar' 
-                    ? 'نحن أكثر من مجرد كيان استشاري؛ نحن محفزون للابتكار والمرونة والنجاح المستدام. مبنيون على أساس من الثقة والتميز والابتكار، نمكّن المؤسسات في منطقة الشرق الأوسط وشمال أفريقيا ودول الخليج من خلال تقديم حلول مدعومة بالذكاء الاصطناعي في الحوكمة والامتثال والأمن السيبراني والتحول الرقمي والاستدامة.'
-                    : 'We are more than a consulting entity; we catalyse innovation, resilience, and sustainable success. Built on a foundation of trust, excellence, and innovation, empowers organizations across the MENA and GCC regions by delivering AI-powered solutions in governance, compliance, cybersecurity, digital transformation, and ESG.'}
-                </p>
-              </div>
-
-              <div className="bg-gradient-to-br from-[#1a1a2e] to-[#16213e] text-white rounded-lg p-8 hover:shadow-xl transition-all">
-                <p className="text-xs font-bold tracking-widest opacity-70 mb-4">
-                  {lang === 'ar' ? 'فريقنا' : 'OUR TEAM'}
-                </p>
-                <p className="text-lg leading-relaxed">
-                  {lang === 'ar' 
-                    ? 'بفريق من المهنيين ذوي الخبرة العالية من خلفيات الشركات الأربع الكبرى والشركات الاستشارية العالمية، تقدم أكسيليريت خدمات مخصصة عالية التأثير تحقق نتائج قابلة للقياس. تقف الشركة كشريك موثوق للمؤسسات الخاصة والجهات الحكومية والهيئات التنظيمية والشركات الصغيرة والمتوسطة.'
-                    : 'With a team of highly experienced professionals from Big 4 backgrounds and global advisory firms, ACCELERAT provides tailored, high-impact services that drive measurable outcomes. The firm stands as a trusted partner to private enterprises, government institutions, regulatory bodies, and small and medium-sized enterprises (SMEs), offering a comprehensive portfolio of services that aligns with the highest standards of quality, integrity, and strategic insight.'}
-                </p>
-              </div>
-
-              <div className="bg-gradient-to-br from-[#2d3436] to-[#1e272e] text-white rounded-lg p-8 hover:shadow-xl transition-all">
-                <p className="text-xs font-bold tracking-widest opacity-70 mb-4">
-                  {lang === 'ar' ? 'التزامنا' : 'OUR COMMITMENT'}
-                </p>
-                <p className="text-lg leading-relaxed">
-                  {lang === 'ar' 
-                    ? 'سواء كان ذلك دعم الاستعداد للطرح العام الأولي، أو تحويل نماذج الأعمال، أو ضمان الامتثال التنظيمي، فإن أكسيليريت ملتزمة بتسريع النجاح وتشكيل مستقبل التميز في الأعمال في المملكة العربية السعودية وخارجها.'
-                    : 'Whether supporting IPO readiness, transforming business models, or ensuring regulatory compliance, ACCELERAT is committed to accelerating success and shaping the future of business excellence in Saudi Arabia and beyond.'}
-                </p>
-              </div>
-            </div>
+            {/* Removed WHO WE ARE / OUR TEAM / OUR COMMITMENT cards as requested */}
 
             <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-8 border border-cyber-emerald/20">
               <h3 className="text-2xl font-bold text-cyber-emerald dark:text-white mb-6 text-center">
@@ -340,12 +307,7 @@ const WhoWeAre: React.FC = () => {
                 ? 'شركة مرخصة تعمل بموجب القوانين السعودية'
                 : 'Licensed company operating under Saudi regulations'}
             </p>
-            <a
-              href="/search/establishment-law"
-              className="inline-block px-8 py-3 bg-white text-cyber-emerald font-bold rounded-lg hover:bg-gray-100 transition-all"
-            >
-              {lang === 'ar' ? 'استعراض وبحث' : 'BROWSE & SEARCH'}
-            </a>
+            {/* Removed BROWSE & SEARCH button as requested */}
           </div>
         </section>
       </div>

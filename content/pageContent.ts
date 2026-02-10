@@ -22,8 +22,8 @@ export const pageContent = {
           cta: "اقرأ المزيد"
         },
         establishmentLaw: {
-          label: "التأسيس القانوني",
-          title: "وظائف أكسيليريت",
+          label: "أكسيليريت 360",
+          title: "أكسيليريت 360",
           whoWeAuditLabel: "من نخدم",
           whoWeAuditDescription: "الجهات الحكومية، المؤسسات المالية، الشركات، والمنشآت الصغيرة والمتوسطة",
           cta: "➔"
@@ -73,8 +73,8 @@ export const pageContent = {
           cta: "READ MORE"
         },
         establishmentLaw: {
-          label: "ESTABLISHMENT LAW",
-          title: "Functions of ACCELERAT",
+          label: "ACCELERAT 360",
+          title: "ACCELERAT 360",
           whoWeAuditLabel: "WHO WE SERVE",
           whoWeAuditDescription: "Government Entities, Financial Institutions, Corporations, and SMEs",
           cta: "➔"
@@ -184,12 +184,12 @@ export const pageContent = {
       visionSection: {
         title: "رؤيتنا",
         statement: "إنشاء معيار جديد في قطاع الاستشارات لتمكين شركائنا من خلال حلول مبتكرة ورؤى استراتيجية وحوكمة فعالة",
-        explanation: "نؤمن بأن الحوكمة الفعالة وإدارة المخاطر المتقدمة هي أساس النجاح المستدام. رؤيتنا هي أن نصبح الشريك المفضل للمنظمات التي تسعى إلى تحقيق التميز والتحول الرقمي وتحقيق أهدافها الاستراتيجية."
+        explanation: ""
       },
       missionSection: {
         title: "مهمتنا",
-        statement: "بناء الثقة مع شركائنا من خلال العمل معاً لتقديم حلول استشارية وتأكيدية مبتكرة، مدعومة بالتقنيات الرائدة، التي تعزز الأداء وتسرع التحول وتحول المخاطر إلى فرص وتمكن النمو المستدام",
-        explanation: "كل ما نقوم به يرتكز على الثقة والشراكة الحقيقية. نهدف إلى تقديم قيمة حقيقية من خلال حلول مبتكرة مدعومة بأحدث التقنيات والذكاء الاصطناعي."
+        statement: "رفع الأداء، تسريع التحول، تحويل المخاطر إلى فرص، وتمكين النمو المستدام.",
+        explanation: ""
       },
       driveOurWork: {
         title: "كيف توجه رؤيتنا ومهمتنا عملنا",
@@ -207,12 +207,12 @@ export const pageContent = {
       visionSection: {
         title: "Our Vision",
         statement: "Creating a new standard in the consulting sector to empower our partners through innovative solutions, strategic insights, and effective governance",
-        explanation: "We believe that effective governance and advanced risk management are the foundation of sustainable success. Our vision is to become the preferred partner for organisations seeking excellence, digital transformation and strategic goal achievement."
+        explanation: ""
       },
       missionSection: {
         title: "Our Mission",
-        statement: "Building trust with our partners by working together to deliver innovative consulting and assurance solutions, supported by leading technologies, that enhance performance, accelerate transformation, turn risks into opportunities and enable sustainable growth",
-        explanation: "Everything we do is rooted in trust and genuine partnership. We aim to deliver real value through innovative solutions supported by cutting-edge technology and artificial intelligence."
+        statement: "Elevate performance, accelerating transformation, transforming risks into opportunities, and enabling sustainable growth.",
+        explanation: ""
       },
       driveOurWork: {
         title: "How Our Vision and Mission Drive Our Work",

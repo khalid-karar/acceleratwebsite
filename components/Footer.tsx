@@ -7,19 +7,10 @@ const Footer: React.FC = () => {
   const { lang } = useLanguage();
 
   const footerLinks = {
-    whoWeAre: {
-      title: lang === 'ar' ? 'من نحن' : 'Who We Are',
-      links: [
-        { label: lang === 'ar' ? 'نبذة عنا' : 'About us', href: '/who-we-are#about' },
-        { label: lang === 'ar' ? 'رؤيتنا ومهمتنا' : 'Our Mission & Vision', href: '/who-we-are#mission' },
-        { label: lang === 'ar' ? 'قيمنا' : 'Our Values', href: '/who-we-are#values' },
-        { label: lang === 'ar' ? 'استراتيجيتنا' : 'Our Strategy', href: '/who-we-are#strategy' },
-      ]
-    },
     establishmentLaw: {
-      title: lang === 'ar' ? 'نظام التأسيس' : 'Establishment Law',
+      title: lang === 'ar' ? 'أكسيليريت 360' : 'ACCELERAT 360',
       links: [
-        { label: lang === 'ar' ? 'البحث' : 'Search', href: '/search/establishment-law' },
+        { label: lang === 'ar' ? 'أكسيليريت 360' : 'ACCELERAT 360', href: '/accelerat-360' },
       ]
     },
     whatWeDo: {
@@ -34,15 +25,13 @@ const Footer: React.FC = () => {
       ]
     },
     whoWeAudit: {
-      title: lang === 'ar' ? 'من نُدقق' : 'Who We Audit',
+      title: lang === 'ar' ? 'الشراكات' : 'Partnerships',
       links: [
-        { label: lang === 'ar' ? 'نطاق التدقيق' : 'Audit Universe', href: '/who-we-audit#universe' },
-        { label: lang === 'ar' ? 'القطاعات' : 'Sectors', href: '/who-we-audit#sectors' },
+        { label: lang === 'ar' ? 'الشراكات' : 'Partnerships', href: '/partnerships' },
       ]
     },
     other: {
       links: [
-        { label: lang === 'ar' ? 'الشراكات' : 'Partnerships', href: '/partnerships' },
         { label: lang === 'ar' ? 'الأخبار والفعاليات' : 'News & Events', href: '/news-events' },
         { label: lang === 'ar' ? 'تواصل معنا' : 'Contact Us', href: '/contact-us' },
       ]
@@ -71,25 +60,11 @@ const Footer: React.FC = () => {
             </Link>
           </div>
 
-          {/* Who We Are */}
-          <div>
-            <Link to="/who-we-are" className="text-lg font-bold hover:text-digital-green transition-colors block mb-4">
-              {footerLinks.whoWeAre.title}
-            </Link>
-            <ul className="space-y-2">
-              {footerLinks.whoWeAre.links.map((link, idx) => (
-                <li key={idx}>
-                  <Link to={link.href} className="text-gray-400 hover:text-white text-sm transition-colors">
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+          {/* (Removed Who We Are block per design) */}
 
-          {/* Establishment Law */}
+          {/* ACCELERAT 360 */}
           <div>
-            <Link to="/search/establishment-law" className="text-lg font-bold hover:text-digital-green transition-colors block mb-4">
+            <Link to={footerLinks.establishmentLaw.links[0].href} className="text-lg font-bold hover:text-digital-green transition-colors block mb-4">
               {footerLinks.establishmentLaw.title}
             </Link>
             <ul className="space-y-2">
@@ -119,9 +94,9 @@ const Footer: React.FC = () => {
             </ul>
           </div>
 
-          {/* Who We Audit */}
+          {/* Partnerships */}
           <div>
-            <Link to="/who-we-audit" className="text-lg font-bold hover:text-digital-green transition-colors block mb-4">
+            <Link to={footerLinks.whoWeAudit.links[0].href} className="text-lg font-bold hover:text-digital-green transition-colors block mb-4">
               {footerLinks.whoWeAudit.title}
             </Link>
             <ul className="space-y-2">

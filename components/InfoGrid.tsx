@@ -74,12 +74,12 @@ const InfoGrid: React.FC = () => {
           </div>
         </div>
 
-        {/* Card 2: Establishment Law & Who We Audit (Brand Red + Emerald) */}
-        <div className="bg-shiny-red flex flex-col h-[500px] text-white relative">
+        {/* Card 2: ACCELERAT 360 (Emerald) */}
+        <div className="bg-cyber-emerald flex flex-col h-[500px] text-white relative">
             
-            {/* Top Section: Functions - Links to /establishment-law */}
+            {/* Top Section: Functions - Links to /accelerat-360 */}
             <div 
-              onClick={() => navigate('/establishment-law')}
+              onClick={() => navigate('/accelerat-360')}
               className="flex-1 p-8 md:p-10 pb-0 flex flex-col cursor-pointer group/top hover:bg-white/5 transition-colors"
             >
                 <h4 className="text-xs font-bold text-white/80 uppercase tracking-[0.15em] mb-6">
@@ -99,7 +99,7 @@ const InfoGrid: React.FC = () => {
             {/* Bottom Section: Who We Serve - Links to /who-we-audit */}
             <div 
               onClick={() => navigate('/who-we-audit')}
-              className="bg-cyber-emerald p-8 md:p-10 pt-6 border-t border-white/10 cursor-pointer group/bottom hover:bg-[#002c23] transition-colors"
+              className="bg-[#013626] p-8 md:p-10 pt-6 border-t border-white/10 cursor-pointer group/bottom hover:bg-[#002c23] transition-colors"
             >
                  <h4 className="text-xs font-bold text-white/80 uppercase tracking-[0.15em] mb-4">
                    {content.cards.establishmentLaw.whoWeAuditLabel}
