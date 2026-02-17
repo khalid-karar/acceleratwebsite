@@ -1,5 +1,7 @@
 import React from 'react';
-import { Instagram, Twitter, Linkedin, ArrowRight } from 'lucide-react';
+import { Instagram, Linkedin, ArrowRight } from 'lucide-react';
+import XIcon from '../components/XIcon';
+import { AcceleratText } from '../components/AcceleratText';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 
@@ -141,7 +143,7 @@ const Home: React.FC = () => {
                     <Instagram size={24} />
                   </a>
                   <a href="#" className="hover:text-cyber-emerald transition-colors">
-                    <Twitter size={24} />
+                    <XIcon size={24} />
                   </a>
                   <a href="#" className="hover:text-cyber-emerald transition-colors">
                     <Linkedin size={24} />

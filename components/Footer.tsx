@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Instagram, Twitter, Linkedin, Mail, Phone, Printer } from 'lucide-react';
+import { Instagram, Linkedin, Mail, Phone, Printer } from 'lucide-react';
+import XIcon from './XIcon';
+import { AcceleratText } from './AcceleratText';
 import { useLanguage } from '../context/LanguageContext';
 
 const Footer: React.FC = () => {
@@ -16,12 +18,9 @@ const Footer: React.FC = () => {
     whatWeDo: {
       title: lang === 'ar' ? 'ماذا نقدم' : 'What We Do',
       links: [
-        { label: lang === 'ar' ? 'التدقيق المالي' : 'Financial Audit', href: '/financial-audit' },
-        { label: lang === 'ar' ? 'تدقيق الأداء' : 'Performance Audit', href: '/performance-audit' },
-        { label: lang === 'ar' ? 'التدقيق الرقمي' : 'Digital Audit', href: '/digital-audit' },
-        { label: lang === 'ar' ? 'الأكاديمية' : 'Academy', href: '/fa-academy' },
-        { label: lang === 'ar' ? 'الاستشارات' : 'Consulting', href: '/consulting-assessments' },
-        { label: lang === 'ar' ? 'خدمات أخرى' : 'Other Services', href: '/other-audit' },
+        { label: lang === 'ar' ? 'الخدمات الاستشارية' : 'Advisory Services', href: '/advisory-services' },
+        { label: lang === 'ar' ? 'خدمات التأكيد' : 'Assurance Services', href: '/assurance-services' },
+        { label: lang === 'ar' ? 'خدمات الاستشارات' : 'Consulting Services', href: '/consulting-services' },
       ]
     },
     whoWeAudit: {
@@ -65,7 +64,7 @@ const Footer: React.FC = () => {
           {/* ACCELERAT 360 */}
           <div>
             <Link to={footerLinks.establishmentLaw.links[0].href} className="text-lg font-bold hover:text-digital-green transition-colors block mb-4">
-              {footerLinks.establishmentLaw.title}
+              <AcceleratText text={footerLinks.establishmentLaw.title} />
             </Link>
             <ul className="space-y-2">
               {footerLinks.establishmentLaw.links.map((link, idx) => (
@@ -131,7 +130,7 @@ const Footer: React.FC = () => {
                   <Instagram size={20} />
                 </a>
                 <a href="https://accelerateconsulting.net/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-digital-green transition-colors">
-                  <Twitter size={20} />
+                  <XIcon size={20} />
                 </a>
                 <a href="https://accelerateconsulting.net/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-digital-green transition-colors">
                   <Linkedin size={20} />

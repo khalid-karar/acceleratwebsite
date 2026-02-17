@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
+import { AcceleratText } from '../components/AcceleratText';
 import { useLanguage } from '../context/LanguageContext';
 import PageHero from '../components/PageHero';
 
@@ -104,7 +105,7 @@ const AdvisoryServices: React.FC = () => {
       <div className="py-16 px-6 md:px-12">
         <div className="max-w-5xl mx-auto">
           <p className="text-xl text-gray-700 dark:text-gray-300 mb-16 leading-relaxed">
-            {c.serviceOverview.description}
+            <AcceleratText text={c.serviceOverview.description} />
           </p>
 
           {/* Services */}

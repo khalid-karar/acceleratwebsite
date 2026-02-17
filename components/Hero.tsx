@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react';
-import { Instagram, Linkedin, Twitter, PlayCircle, PauseCircle } from 'lucide-react';
+import { Instagram, Linkedin, PlayCircle, PauseCircle } from 'lucide-react';
+import XIcon from './XIcon';
 import { pageContent } from '../content/pageContent';
 import { useLanguage } from '../context/LanguageContext';
 
@@ -106,9 +107,9 @@ const Hero: React.FC = () => {
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="hover:text-digital-green hover:-translate-y-1 transition-all"
-                  aria-label="Twitter"
+                  aria-label="X"
                 >
-                  <Twitter size={22} />
+                  <XIcon size={22} />
                 </a>
                 <a 
                   href={socialLinks.linkedin} 

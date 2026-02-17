@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { pageContent } from '../content/pageContent';
+import { AcceleratText } from '../components/AcceleratText';
 import { useLanguage } from '../context/LanguageContext';
 import Footer from '../components/Footer';
 
@@ -68,9 +69,9 @@ const WhoWeAre: React.FC = () => {
             {lang === 'ar' ? 'من نحن' : 'Who We Are'}
           </h1>
           <p className="text-xl md:text-2xl text-white/90 max-w-3xl">
-            {lang === 'ar' 
+            <AcceleratText text={lang === 'ar' 
               ? 'تعرف على المزيد عن أكسيليريت للاستشارات' 
-              : 'GET TO KNOW MORE ABOUT ACCELERAT CONSULTING'}
+              : 'GET TO KNOW MORE ABOUT ACCELERAT CONSULTING'} />
           </p>
         </div>
       </section>
@@ -116,34 +117,72 @@ const WhoWeAre: React.FC = () => {
 
             {/* Removed WHO WE ARE / OUR TEAM / OUR COMMITMENT cards as requested */}
 
-            <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-8 border border-cyber-emerald/20">
-              <h3 className="text-2xl font-bold text-cyber-emerald dark:text-white mb-6 text-center">
+            <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-10 border border-cyber-emerald/20">
+              <h3 className="text-2xl font-bold text-cyber-emerald dark:text-white mb-8 text-center">
                 {lang === 'ar' ? 'الجهات التي تم العمل معها من خلال خبراؤنا' : 'Entities that are served by our Talented resources and Qualified Experts'}
               </h3>
-              <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 items-center justify-items-center">
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 items-center justify-items-center">
                 {/* Row 1 */}
-                <img src="/images/clients/financial-audit-authority.png" alt="Financial Audit Authority" className="h-12 md:h-16 object-contain grayscale hover:grayscale-0 transition-all" />
-                <img src="/images/clients/rta.png" alt="RTA" className="h-12 md:h-16 object-contain grayscale hover:grayscale-0 transition-all" />
-                <img src="/images/clients/emirates.png" alt="Emirates" className="h-12 md:h-16 object-contain grayscale hover:grayscale-0 transition-all" />
-                <img src="/images/clients/dubai-health-authority.png" alt="Dubai Health Authority" className="h-12 md:h-16 object-contain grayscale hover:grayscale-0 transition-all" />
-                <img src="/images/clients/oman-investment-authority.png" alt="Oman Investment Authority" className="h-12 md:h-16 object-contain grayscale hover:grayscale-0 transition-all" />
-                <img src="/images/clients/modon.png" alt="MODON" className="h-12 md:h-16 object-contain grayscale hover:grayscale-0 transition-all" />
+                <div className="bg-white dark:bg-gray-700 rounded-lg p-4 w-full flex items-center justify-center h-24 shadow-sm hover:shadow-md transition-all">
+                  <img src="/images/clients/financial-audit-authority.png" alt="Financial Audit Authority" className="h-16 md:h-20 object-contain grayscale hover:grayscale-0 transition-all duration-300" />
+                </div>
+                <div className="bg-white dark:bg-gray-700 rounded-lg p-4 w-full flex items-center justify-center h-24 shadow-sm hover:shadow-md transition-all">
+                  <img src="/images/clients/rta.png" alt="RTA" className="h-16 md:h-20 object-contain grayscale hover:grayscale-0 transition-all duration-300" />
+                </div>
+                <div className="bg-white dark:bg-gray-700 rounded-lg p-4 w-full flex items-center justify-center h-24 shadow-sm hover:shadow-md transition-all">
+                  <img src="/images/clients/emirates.png" alt="Emirates" className="h-16 md:h-20 object-contain grayscale hover:grayscale-0 transition-all duration-300" />
+                </div>
+                <div className="bg-white dark:bg-gray-700 rounded-lg p-4 w-full flex items-center justify-center h-24 shadow-sm hover:shadow-md transition-all">
+                  <img src="/images/clients/dubai-health-authority.png" alt="Dubai Health Authority" className="h-16 md:h-20 object-contain grayscale hover:grayscale-0 transition-all duration-300" />
+                </div>
+                <div className="bg-white dark:bg-gray-700 rounded-lg p-4 w-full flex items-center justify-center h-24 shadow-sm hover:shadow-md transition-all">
+                  <img src="/images/clients/oman-investment-authority.png" alt="Oman Investment Authority" className="h-16 md:h-20 object-contain grayscale hover:grayscale-0 transition-all duration-300" />
+                </div>
                 {/* Row 2 */}
-                <img src="/images/clients/government-of-dubai.png" alt="Government of Dubai" className="h-12 md:h-16 object-contain grayscale hover:grayscale-0 transition-all" />
-                <img src="/images/clients/emaar.png" alt="EMAAR" className="h-12 md:h-16 object-contain grayscale hover:grayscale-0 transition-all" />
-                <img src="/images/clients/oriental-weavers.png" alt="Oriental Weavers" className="h-12 md:h-16 object-contain grayscale hover:grayscale-0 transition-all" />
-                <img src="/images/clients/wafeer.png" alt="Wafeer" className="h-12 md:h-16 object-contain grayscale hover:grayscale-0 transition-all" />
-                <img src="/images/clients/indeal.png" alt="Indeal" className="h-12 md:h-16 object-contain grayscale hover:grayscale-0 transition-all" />
-                <img src="/images/clients/air-arabia.png" alt="Air Arabia" className="h-12 md:h-16 object-contain grayscale hover:grayscale-0 transition-all" />
+                <div className="bg-white dark:bg-gray-700 rounded-lg p-4 w-full flex items-center justify-center h-24 shadow-sm hover:shadow-md transition-all">
+                  <img src="/images/clients/modon.png" alt="MODON" className="h-16 md:h-20 object-contain grayscale hover:grayscale-0 transition-all duration-300" />
+                </div>
+                <div className="bg-white dark:bg-gray-700 rounded-lg p-4 w-full flex items-center justify-center h-24 shadow-sm hover:shadow-md transition-all">
+                  <img src="/images/clients/government-of-dubai.png" alt="Government of Dubai" className="h-16 md:h-20 object-contain grayscale hover:grayscale-0 transition-all duration-300" />
+                </div>
+                <div className="bg-white dark:bg-gray-700 rounded-lg p-4 w-full flex items-center justify-center h-24 shadow-sm hover:shadow-md transition-all">
+                  <img src="/images/clients/emaar.png" alt="EMAAR" className="h-16 md:h-20 object-contain grayscale hover:grayscale-0 transition-all duration-300" />
+                </div>
+                <div className="bg-white dark:bg-gray-700 rounded-lg p-4 w-full flex items-center justify-center h-24 shadow-sm hover:shadow-md transition-all">
+                  <img src="/images/clients/oriental-weavers.png" alt="Oriental Weavers" className="h-16 md:h-20 object-contain grayscale hover:grayscale-0 transition-all duration-300" />
+                </div>
+                <div className="bg-white dark:bg-gray-700 rounded-lg p-4 w-full flex items-center justify-center h-24 shadow-sm hover:shadow-md transition-all">
+                  <img src="/images/clients/wafeer.png" alt="Wafeer" className="h-16 md:h-20 object-contain grayscale hover:grayscale-0 transition-all duration-300" />
+                </div>
                 {/* Row 3 */}
-                <img src="/images/clients/nadec.png" alt="NADEC" className="h-12 md:h-16 object-contain grayscale hover:grayscale-0 transition-all" />
-                <img src="/images/clients/etmaen.png" alt="Etmaen" className="h-12 md:h-16 object-contain grayscale hover:grayscale-0 transition-all" />
-                <img src="/images/clients/ministry-hr.png" alt="Ministry of Human Resources" className="h-12 md:h-16 object-contain grayscale hover:grayscale-0 transition-all" />
-                <img src="/images/clients/alyusr.png" alt="AlYusr" className="h-12 md:h-16 object-contain grayscale hover:grayscale-0 transition-all" />
-                <img src="/images/clients/real-estate-general-authority.png" alt="Real Estate General Authority" className="h-12 md:h-16 object-contain grayscale hover:grayscale-0 transition-all" />
-                <img src="/images/clients/t2.png" alt="T2 Business Simplified" className="h-12 md:h-16 object-contain grayscale hover:grayscale-0 transition-all" />
+                <div className="bg-white dark:bg-gray-700 rounded-lg p-4 w-full flex items-center justify-center h-24 shadow-sm hover:shadow-md transition-all">
+                  <img src="/images/clients/indeal.png" alt="Indeal" className="h-16 md:h-20 object-contain grayscale hover:grayscale-0 transition-all duration-300" />
+                </div>
+                <div className="bg-white dark:bg-gray-700 rounded-lg p-4 w-full flex items-center justify-center h-24 shadow-sm hover:shadow-md transition-all">
+                  <img src="/images/clients/air-arabia.png" alt="Air Arabia" className="h-16 md:h-20 object-contain grayscale hover:grayscale-0 transition-all duration-300" />
+                </div>
+                <div className="bg-white dark:bg-gray-700 rounded-lg p-4 w-full flex items-center justify-center h-24 shadow-sm hover:shadow-md transition-all">
+                  <img src="/images/clients/nadec.png" alt="NADEC" className="h-16 md:h-20 object-contain grayscale hover:grayscale-0 transition-all duration-300" />
+                </div>
+                <div className="bg-white dark:bg-gray-700 rounded-lg p-4 w-full flex items-center justify-center h-24 shadow-sm hover:shadow-md transition-all">
+                  <img src="/images/clients/etmaen.png" alt="Etmaen" className="h-16 md:h-20 object-contain grayscale hover:grayscale-0 transition-all duration-300" />
+                </div>
+                <div className="bg-white dark:bg-gray-700 rounded-lg p-4 w-full flex items-center justify-center h-24 shadow-sm hover:shadow-md transition-all">
+                  <img src="/images/clients/ministry-hr.png" alt="Ministry of Human Resources" className="h-16 md:h-20 object-contain grayscale hover:grayscale-0 transition-all duration-300" />
+                </div>
                 {/* Row 4 */}
-                <img src="/images/clients/al-rajhi-bank.png" alt="Al Rajhi Bank" className="h-12 md:h-16 object-contain grayscale hover:grayscale-0 transition-all" />
+                <div className="bg-white dark:bg-gray-700 rounded-lg p-4 w-full flex items-center justify-center h-24 shadow-sm hover:shadow-md transition-all">
+                  <img src="/images/clients/alyusr.png" alt="AlYusr" className="h-16 md:h-20 object-contain grayscale hover:grayscale-0 transition-all duration-300" />
+                </div>
+                <div className="bg-white dark:bg-gray-700 rounded-lg p-4 w-full flex items-center justify-center h-24 shadow-sm hover:shadow-md transition-all">
+                  <img src="/images/clients/real-estate-general-authority.png" alt="Real Estate General Authority" className="h-16 md:h-20 object-contain grayscale hover:grayscale-0 transition-all duration-300" />
+                </div>
+                <div className="bg-white dark:bg-gray-700 rounded-lg p-4 w-full flex items-center justify-center h-24 shadow-sm hover:shadow-md transition-all">
+                  <img src="/images/clients/t2.png" alt="T2 Business Simplified" className="h-16 md:h-20 object-contain grayscale hover:grayscale-0 transition-all duration-300" />
+                </div>
+                <div className="bg-white dark:bg-gray-700 rounded-lg p-4 w-full flex items-center justify-center h-24 shadow-sm hover:shadow-md transition-all">
+                  <img src="/images/clients/al-rajhi-bank.png" alt="Al Rajhi Bank" className="h-16 md:h-20 object-contain grayscale hover:grayscale-0 transition-all duration-300" />
+                </div>
               </div>
             </div>
           </section>

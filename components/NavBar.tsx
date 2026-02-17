@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, Moon, Sun, Monitor, X, ChevronDown, Instagram, Twitter, Linkedin, Volume2, StopCircle, ArrowRight } from 'lucide-react';
+import { Menu, Moon, Sun, Monitor, X, ChevronDown, Instagram, Linkedin, Volume2, StopCircle, ArrowRight } from 'lucide-react';
+import XIcon from './XIcon';
 import { Link } from 'react-router-dom';
 import { menuTranslations } from '../content/menuTranslations';
 
@@ -226,7 +227,7 @@ const NavBar: React.FC<NavBarProps> = ({
                     </div>
                     <div className="flex gap-8 text-gray-400">
                         <Instagram size={20} className="hover:text-digital-green cursor-pointer transition-colors" />
-                        <Twitter size={20} className="hover:text-digital-green cursor-pointer transition-colors" />
+                        <XIcon size={20} className="hover:text-digital-green cursor-pointer transition-colors" />
                         <Linkedin size={20} className="hover:text-digital-green cursor-pointer transition-colors" />
                     </div>
                 </div>

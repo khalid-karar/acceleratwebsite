@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Search, FileText, Download, ChevronRight } from 'lucide-react';
 import { pageContent3 } from '../content/pageContent3';
+import { AcceleratText } from '../components/AcceleratText';
 import { useLanguage } from '../context/LanguageContext';
 
 const EstablishmentLaw: React.FC = () => {
@@ -103,7 +104,7 @@ const EstablishmentLaw: React.FC = () => {
               </div>
               <div>
                 <h2 className="text-2xl md:text-3xl font-bold mb-2">
-                  {lang === 'ar' ? 'نظام تأسيس شركة أكسيليريت للاستشارات المالية' : 'ACCELERAT Financial Consulting Establishment Law'}
+                  <AcceleratText text={lang === 'ar' ? 'نظام تأسيس شركة أكسيليريت للاستشارات المالية' : 'ACCELERAT Financial Consulting Establishment Law'} />
                 </h2>
                 <p className="text-white/80">
                   {lang === 'ar' ? 'السجل التجاري رقم: XXXXXX' : 'Commercial Registration No: XXXXXX'}
@@ -130,7 +131,7 @@ const EstablishmentLaw: React.FC = () => {
                           {section.title}
                         </h3>
                         <p className="text-gray-600 dark:text-gray-400 text-sm mt-1 line-clamp-1">
-                          {section.content}
+                          <AcceleratText text={section.content} />
                         </p>
                       </div>
                     </div>

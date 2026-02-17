@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowRight, Shield, BarChart3, Monitor, GraduationCap, Lightbulb, FileSearch } from 'lucide-react';
+import { AcceleratText } from '../components/AcceleratText';
 import { useLanguage } from '../context/LanguageContext';
 
 const WhatWeDo: React.FC = () => {
@@ -94,9 +95,9 @@ const WhatWeDo: React.FC = () => {
           </h2>
           <div className="w-24 h-1 bg-cyber-emerald dark:bg-digital-green mx-auto mb-8" />
           <p className="text-xl text-gray-700 dark:text-gray-300 leading-relaxed">
-            {lang === 'ar'
+            <AcceleratText text={lang === 'ar'
               ? 'تقدم أكسيليريت خدمات مهنية ومبتكرة تضيف قيمة للعملاء، وتدعمهم في تحقيق أهدافهم، وتحسين عملياتهم، وتعزيز امتثالهم للقوانين واللوائح المعمول بها.'
-              : 'ACCELERAT provides innovative professional services that add value to clients, support them in achieving their objectives, improve their operations, and enhance their compliance with applicable laws and regulations.'}
+              : 'ACCELERAT provides innovative professional services that add value to clients, support them in achieving their objectives, improve their operations, and enhance their compliance with applicable laws and regulations.'} />
           </p>
         </div>
       </section>
@@ -118,7 +119,7 @@ const WhatWeDo: React.FC = () => {
               >
                 <service.icon className="w-12 h-12 mb-6 opacity-80 group-hover:opacity-100 transition-opacity" />
                 <h3 className="text-2xl font-bold mb-4">{service.title}</h3>
-                <p className="text-white/80 mb-6 leading-relaxed">{service.description}</p>
+                <p className="text-white/80 mb-6 leading-relaxed"><AcceleratText text={service.description} /></p>
                 <div className="flex items-center gap-2 text-white/60 group-hover:text-white transition-colors">
                   <span className="text-sm font-semibold">
                     {lang === 'ar' ? 'اقرأ المزيد' : 'Learn More'}

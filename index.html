@@ -92,8 +92,13 @@
         -moz-osx-font-smoothing: grayscale;
       }
       
+      /* Ensure all elements inherit Montserrat */
+      body *, body *::before, body *::after {
+        font-family: inherit;
+      }
+      
       /* Arabic Font */
-      .font-arabic, [lang="ar"] body, [dir="rtl"] body {
+      .font-arabic, .font-arabic *, [lang="ar"] body, [lang="ar"] body *, [dir="rtl"] body, [dir="rtl"] body * {
         font-family: 'Noto Sans Arabic', 'Montserrat', sans-serif;
       }
       
