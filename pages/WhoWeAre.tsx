@@ -118,7 +118,7 @@ const WhoWeAre: React.FC = () => {
 
             <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-8 border border-cyber-emerald/20">
               <h3 className="text-2xl font-bold text-cyber-emerald dark:text-white mb-6 text-center">
-                {lang === 'ar' ? 'الجهات التي يخدمها كوادرنا وخبراؤنا المؤهلون' : 'Entities that are served by our Talented resources and Qualified Experts'}
+                {lang === 'ar' ? 'الجهات التي تم العمل معها من خلال خبراؤنا' : 'Entities that are served by our Talented resources and Qualified Experts'}
               </h3>
               <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 items-center justify-items-center">
                 {/* Row 1 */}

@@ -1,6 +1,6 @@
-import React, { useState, useRef } from 'react'; // 1. Imported useRef
-import { Phone, Mail, MapPin, Clock, Send, CheckCircle, AlertCircle } from 'lucide-react';
-import emailjs from '@emailjs/browser'; // 2. Imported EmailJS
+import React, { useState, useRef } from 'react';
+import { Phone, Mail, MapPin, Send, CheckCircle, AlertCircle } from 'lucide-react';
+import emailjs from '@emailjs/browser';
 import { pageContent3 } from '../content/pageContent3';
 import { useLanguage } from '../context/LanguageContext';
 
@@ -8,7 +8,6 @@ const ContactUs: React.FC = () => {
   const { lang } = useLanguage();
   const content = pageContent3.contactUs[lang];
   
-  // 3. Create a reference to the form element
   const form = useRef<HTMLFormElement>(null);
   
   const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
@@ -35,20 +34,16 @@ const ContactUs: React.FC = () => {
 
     setStatus('sending');
 
-    // 4. Send the email using EmailJS
-    // Replace the placeholders below with your actual keys
     emailjs.sendForm(
-      'YOUR_SERVICE_ID',    // e.g., 'service_gmail'
-      'YOUR_TEMPLATE_ID',   // e.g., 'template_contact_form'
+      'YOUR_SERVICE_ID',
+      'YOUR_TEMPLATE_ID',
       form.current,
-      'YOUR_PUBLIC_KEY'     // e.g., 'user_123456789'
+      'YOUR_PUBLIC_KEY'
     )
     .then((result) => {
         console.log('Email sent:', result.text);
         setStatus('success');
         setFormData({ name: '', email: '', phone: '', company: '', subject: '', message: '' });
-        
-        // Reset success message after 5 seconds
         setTimeout(() => setStatus('idle'), 5000);
     }, (error) => {
         console.error('Email error:', error.text);
@@ -67,24 +62,78 @@ const ContactUs: React.FC = () => {
 
   return (
     <div className="min-h-screen">
-       {/* ... (Hero and Office Cards sections remain exactly the same) ... */}
-       {/* I am omitting the top part to save space, paste your previous hero/cards code here */}
+       {/* (Hero and Office Cards sections omitted for brevity as requested) */}
 
       {/* Contact Form Section */}
       <section className="py-16 px-6 md:px-12">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             
-            {/* Map Section (Updated from previous step) */}
-            <div className="bg-gray-200 dark:bg-gray-700 rounded-lg overflow-hidden h-[500px] relative shadow-lg">
+            {/* Map Section with Contact Info Overlay */}
+            <div className="bg-gray-200 dark:bg-gray-700 rounded-lg overflow-hidden h-[600px] relative shadow-lg group">
               <iframe 
                 width="100%" height="100%" id="gmap_canvas" 
-                src="https://maps.google.com/maps?q=Al+Malaz,+Riyadh&t=&z=14&ie=UTF8&iwloc=&output=embed" 
+                src="https://maps.google.com/maps?q=Riyadh&t=&z=13&ie=UTF8&iwloc=&output=embed" 
                 frameBorder="0" scrolling="no" marginHeight={0} marginWidth={0}
                 title="Accelerate Consulting Riyadh Office"
-                className="w-full h-full filter grayscale-[20%] contrast-[1.1]"
+                className="w-full h-full filter grayscale-[20%] contrast-[1.1] group-hover:grayscale-0 transition-all duration-500"
               ></iframe>
-               {/* ... (Location card logic) ... */}
+              
+              {/* === ADDED: Contact Info Card Overlay === */}
+              <div className={`absolute bottom-6 ${lang === 'ar' ? 'right-6' : 'left-6'} bg-white/95 dark:bg-gray-800/95 backdrop-blur-md p-6 rounded-xl shadow-2xl border border-gray-100 dark:border-gray-700 max-w-sm w-[calc(100%-3rem)]`}>
+                
+                {/* Address Item */}
+                <div className="flex items-start gap-4 mb-6">
+                  <div className="p-3 bg-cyber-emerald/10 rounded-lg shrink-0">
+                    <MapPin className="w-6 h-6 text-cyber-emerald" />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-gray-900 dark:text-white mb-1">
+                      {lang === 'ar' ? 'مكتبنا الرئيسي' : 'Main Office'}
+                    </h4>
+                    <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
+                      {lang === 'ar' ? 'الرياض، المملكة العربية السعودية' : 'Riyadh, Saudi Arabia'}
+                    </p>
+                  </div>
+                </div>
+
+                {/* Phone Item - NEW NUMBER ADDED HERE */}
+                <div className="flex items-start gap-4 mb-6">
+                  <div className="p-3 bg-cyber-emerald/10 rounded-lg shrink-0">
+                    <Phone className="w-6 h-6 text-cyber-emerald" />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-gray-900 dark:text-white mb-1">
+                      {lang === 'ar' ? 'اتصل بنا' : 'Call Us'}
+                    </h4>
+                    <a 
+                      href="tel:0555388824" 
+                      dir="ltr" 
+                      className="text-sm text-gray-600 dark:text-gray-300 hover:text-cyber-emerald transition-colors font-medium block"
+                    >
+                      0555388824
+                    </a>
+                  </div>
+                </div>
+
+                {/* Email Item */}
+                <div className="flex items-start gap-4">
+                  <div className="p-3 bg-cyber-emerald/10 rounded-lg shrink-0">
+                    <Mail className="w-6 h-6 text-cyber-emerald" />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-gray-900 dark:text-white mb-1">
+                      {lang === 'ar' ? 'البريد الإلكتروني' : 'Email Us'}
+                    </h4>
+                    <a href="mailto:info@accelerat.sa" className="text-sm text-gray-600 dark:text-gray-300 hover:text-cyber-emerald transition-colors break-all">
+                      info@accelerat.sa
+                    </a>
+                  </div>
+                </div>
+
+              </div>
+              {/* === END Contact Info Card === */}
+
             </div>
 
             {/* Contact Form */}
@@ -107,7 +156,6 @@ const ContactUs: React.FC = () => {
                   </p>
                 </div>
               ) : (
-                // 5. Attached the 'ref' to the form tag
                 <form ref={form} onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
@@ -170,7 +218,6 @@ const ContactUs: React.FC = () => {
                     />
                   </div>
 
-                  {/* Error Message Display */}
                   {status === 'error' && (
                     <div className="flex items-center gap-2 text-red-500 bg-red-50 p-3 rounded-lg">
                         <AlertCircle size={20} />

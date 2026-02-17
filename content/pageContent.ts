@@ -47,7 +47,7 @@ export const pageContent = {
         newsEvents: {
           label: "الأخبار والفعاليات",
           date: "19 يناير 2026",
-          headline: "أكسيليريت تطلق منصة ACCELERAT 360 التشخيصية المدعومة بالذكاء الاصطناعي للسوق السعودي."
+          headline: "أكسيليريت تطلق منصة ACCELERAT 360° التشخيصية المدعومة بالذكاء الاصطناعي للسوق السعودي."
         }
       }
     },
@@ -73,8 +73,8 @@ export const pageContent = {
           cta: "READ MORE"
         },
         establishmentLaw: {
-          label: "ACCELERAT 360",
-          title: "ACCELERAT 360",
+          label: "ACCELERAT 360°",
+          title: "ACCELERAT 360°",
           whoWeAuditLabel: "WHO WE SERVE",
           whoWeAuditDescription: "Government Entities, Financial Institutions, Corporations, and SMEs",
           cta: "➔"
@@ -98,7 +98,7 @@ export const pageContent = {
         newsEvents: {
           label: "NEWS AND EVENTS",
           date: "January 19, 2026",
-          headline: "ACCELERAT launches AI-powered ACCELERAT 360 diagnostic platform for Saudi market."
+          headline: "ACCELERAT launches AI-powered ACCELERAT 360° diagnostic platform for Saudi market."
         }
       }
     }
@@ -628,14 +628,14 @@ export const pageContent = {
       cta: "طلب تقييم أكسيليريت 360"
     },
     en: {
-      metaTitle: "ACCELERAT 360 - Intelligent Assessment Tool",
+      metaTitle: "ACCELERAT 360° - Intelligent Assessment Tool",
       metaDescription: "Comprehensive diagnostic assessment powered by AI that measures organisational maturity and control effectiveness.",
       whatIs360: {
-        title: "What is ACCELERAT 360?",
-        description: "ACCELERAT 360 is an advanced diagnostic assessment tool powered by artificial intelligence. It combines comprehensive analysis, data and deep insights to give you a clear picture of governance, risk management and compliance status in your organisation."
+        title: "What is ACCELERAT 360°?",
+        description: "ACCELERAT 360° is an advanced diagnostic assessment tool powered by artificial intelligence. It combines comprehensive analysis, data and deep insights to give you a clear picture of governance, risk management and compliance status in your organisation."
       },
       howItWorks: {
-        title: "How ACCELERAT 360 Works",
+        title: "How ACCELERAT 360° Works",
         steps: [
           {
             number: "1",
@@ -660,7 +660,7 @@ export const pageContent = {
         ]
       },
       whatItMeasures: {
-        title: "What ACCELERAT 360 Measures",
+        title: "What ACCELERAT 360° Measures",
         measurements: [
           "Governance maturity level and organisational structure",
           "Effectiveness of internal control systems",
@@ -690,7 +690,7 @@ export const pageContent = {
           "Phase 4: Report and Recommendations (1 week)"
         ]
       },
-      cta: "Request ACCELERAT 360 Assessment"
+      cta: "Request ACCELERAT 360° Assessment"
     }
   },
 
@@ -970,7 +970,7 @@ export const pageContent = {
           },
           {
             title: "تحليل المخاطر والتحليلات المتقدمة",
-            description: "تحليل متقدم للمخاطر واستخدام أدوات البيانات والتحليلات للكشف عن الأنماط والشذوذ"
+            description: "تحليل متقدم للمخاطر واستخدام أدوات البيانات والتحليلات للكشف عن الأنماط "
           },
           {
             title: "استشارات الحوكمة والمخاطر والامتثال",

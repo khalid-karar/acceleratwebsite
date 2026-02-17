@@ -47,7 +47,7 @@ const WhatWeDo: React.FC = () => {
       title: lang === 'ar' ? 'الاستشارات والتقييمات' : 'Consulting & Assessments',
       description: lang === 'ar'
         ? 'أكسيليريت 360 - أداة تقييم تشخيصية مدعومة بالذكاء الاصطناعي لقياس نضج المنظمة.'
-        : 'ACCELERAT 360 - AI-powered diagnostic assessment tool measuring organizational maturity.',
+        : 'ACCELERAT 360° - AI-powered diagnostic assessment tool measuring organizational maturity.',
       link: '/consulting-assessments',
       color: 'from-[#f07563] to-[#e85a4f]'
     },

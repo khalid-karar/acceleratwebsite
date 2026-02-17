@@ -76,22 +76,7 @@ const ConsultingAssessments: React.FC = () => {
             </div>
           </section>
 
-          {/* Assessment Process */}
-          <section className="p-8 bg-white dark:bg-gray-800 rounded-lg border border-cyber-emerald/20">
-            <h2 className="text-4xl font-bold text-cyber-emerald dark:text-white mb-8">
-              {content.assessmentProcess.title}
-            </h2>
-            <ul className="space-y-4">
-              {content.assessmentProcess.phases.map((phase, idx) => (
-                <li key={idx} className="text-gray-700 dark:text-gray-300 flex items-start gap-4 p-4 bg-gray-50 dark:bg-gray-700 rounded">
-                  <span className="text-2xl font-bold text-cyber-emerald dark:text-digital-green flex-shrink-0">
-                    {idx + 1}
-                  </span>
-                  <span className="text-lg">{phase}</span>
-                </li>
-              ))}
-            </ul>
-          </section>
+          
         </div>
       </div>
     </div>

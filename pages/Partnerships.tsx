@@ -26,6 +26,17 @@ const Partnerships: React.FC = () => {
         : ['AI infrastructure & platform engineering', 'Cybersecurity & digital transformation', 'Flexible, integrable technology solutions'],
       logo: '/images/partners/contact-point.png',
       cta: { label: lang === 'ar' ? 'عرض الشريك' : 'View Partner', href: '#' }
+    },
+    // Added Missan Tech Company
+    {
+      key: 'missan-tech',
+      name: lang === 'ar' ? 'شركة ميسان التقنية' : 'Missan Tech Company',
+      role: lang === 'ar' ? 'شريك الحلول الرقمية' : 'Digital Solutions Partner',
+      bullets: lang === 'ar'
+        ? ['تطوير حلول برمجية مبتكرة', 'تحسين وتطوير النظم', 'دعم التحول الرقمي للشركات']
+        : ['Innovative software solutions development', 'Systems optimization and enhancement', 'Enterprise digital transformation support'],
+      logo: '/images/partners/missan-tech.png',
+      cta: { label: lang === 'ar' ? 'عرض الشريك' : 'View Partner', href: '#' }
     }
   ];
 
@@ -68,8 +79,8 @@ const Partnerships: React.FC = () => {
           <h4 className="text-xl font-bold text-gray-900 dark:text-white mb-3">{lang === 'ar' ? 'كيفية التعاون' : 'How we collaborate'}</h4>
           <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
             {lang === 'ar'
-              ? 'تجمع شراكتنا بين خبرة السعيد في المحاسبة والتدقيق مع قدرات Contact Point في البنية التحتية الرقمية والأمن السيبراني لتقديم حلول متكاملة تدعم الحوكمة، إدارة المخاطر، والتحول الرقمي.'
-              : 'Our partnership combines Al‑Saeed’s accounting and audit expertise with Contact Point’s digital infrastructure, AI and cybersecurity capabilities to deliver integrated solutions for governance, risk management, and digital transformation.'}
+              ? 'تجمع شراكتنا بين خبرة السعيد في المحاسبة والتدقيق، وقدرات Contact Point في البنية التحتية الرقمية والأمن السيبراني، وخبرات شركة ميسان التقنية في الحلول الرقمية لتقديم حلول متكاملة تدعم الحوكمة، إدارة المخاطر، والتحول الرقمي.'
+              : 'Our partnership combines Al‑Saeed’s accounting and audit expertise, Contact Point’s digital infrastructure and cybersecurity capabilities, alongside Missan Tech Company\'s digital solutions to deliver integrated approaches for governance, risk management, and digital transformation.'}
           </p>
         </section>
       </div>
