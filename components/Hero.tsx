@@ -18,7 +18,7 @@ const Hero: React.FC = () => {
   };
 
   //const videoSrc = '/videos/hero-background.mp4';
-  const videoSrc = 'https://streamable.com/zw8osw';
+  const videoSrc = 'https://res.cloudinary.com/dzipj6lnb/video/upload/v1772364281/hero-background_czfzbd.mp4';
   const fallbackImage = '/images/homepage.jpg';
 
   // Values bullet points
