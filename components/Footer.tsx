@@ -1,26 +1,41 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Instagram, Linkedin, Mail, Phone, Printer } from 'lucide-react';
-import XIcon from './XIcon';
-import { AcceleratText } from './AcceleratText';
+import { Instagram, Twitter, Linkedin, Mail, Phone, Printer } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 
 const Footer: React.FC = () => {
   const { lang } = useLanguage();
 
   const footerLinks = {
+    whoWeAre: {
+      title: lang === 'ar' ? 'من نحن' : 'Who We Are',
+      links: [
+        { label: lang === 'ar' ? 'من نحن' : 'Who We Are', href: '/who-we-are' },
+        { label: lang === 'ar' ? 'عن الشركة' : 'About Us', href: '/who-we-are#about' },
+        { label: lang === 'ar' ? 'رؤيتنا ورسالتنا' : 'Our Mission & Vision', href: '/who-we-are#mission' },
+        { label: lang === 'ar' ? 'قيمنا' : 'Our Values', href: '/who-we-are#values' },
+        { label: lang === 'ar' ? 'استراتيجيتنا' : 'Our Strategy', href: '/who-we-are#strategy' },
+      ]
+    },
     establishmentLaw: {
       title: lang === 'ar' ? 'أكسيليريت 360' : 'ACCELERAT 360',
       links: [
-        { label: lang === 'ar' ? 'أكسيليريت 360' : 'ACCELERAT 360', href: '/accelerat-360' },
+        { label: lang === 'ar' ? 'أكسيليريت 360°' : 'ACCELERAT 360°', href: '/accelerat-360' },
       ]
     },
     whatWeDo: {
       title: lang === 'ar' ? 'ماذا نقدم' : 'What We Do',
       links: [
+        // Added from Navbar
         { label: lang === 'ar' ? 'الخدمات الاستشارية' : 'Advisory Services', href: '/advisory-services' },
         { label: lang === 'ar' ? 'خدمات التأكيد' : 'Assurance Services', href: '/assurance-services' },
         { label: lang === 'ar' ? 'خدمات الاستشارات' : 'Consulting Services', href: '/consulting-services' },
+        // Existing detailed services
+        { label: lang === 'ar' ? 'التدقيق المالي' : 'Financial Audit', href: '/financial-audit' },
+        { label: lang === 'ar' ? 'تدقيق الأداء' : 'Performance Audit', href: '/performance-audit' },
+        { label: lang === 'ar' ? 'التدقيق الرقمي' : 'Digital Audit', href: '/digital-audit' },
+        { label: lang === 'ar' ? 'الأكاديمية' : 'Academy', href: '/fa-academy' },
+        { label: lang === 'ar' ? 'خدمات أخرى' : 'Other Services', href: '/other-audit' },
       ]
     },
     whoWeAudit: {
@@ -31,6 +46,7 @@ const Footer: React.FC = () => {
     },
     other: {
       links: [
+        { label: lang === 'ar' ? 'المنشورات' : 'Publications', href: '#' }, // Added from Navbar
         { label: lang === 'ar' ? 'الأخبار والفعاليات' : 'News & Events', href: '/news-events' },
         { label: lang === 'ar' ? 'تواصل معنا' : 'Contact Us', href: '/contact-us' },
       ]
@@ -59,12 +75,26 @@ const Footer: React.FC = () => {
             </Link>
           </div>
 
-          {/* (Removed Who We Are block per design) */}
+          {/* Who We Are (Restored to match Navbar) */}
+          <div>
+            <Link to={footerLinks.whoWeAre.links[0].href} className="text-lg font-bold hover:text-digital-green transition-colors block mb-4">
+              {footerLinks.whoWeAre.title}
+            </Link>
+            <ul className="space-y-2">
+              {footerLinks.whoWeAre.links.slice(1).map((link, idx) => (
+                <li key={idx}>
+                  <Link to={link.href} className="text-gray-400 hover:text-white text-sm transition-colors">
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
 
           {/* ACCELERAT 360 */}
           <div>
             <Link to={footerLinks.establishmentLaw.links[0].href} className="text-lg font-bold hover:text-digital-green transition-colors block mb-4">
-              <AcceleratText text={footerLinks.establishmentLaw.title} />
+              {footerLinks.establishmentLaw.title}
             </Link>
             <ul className="space-y-2">
               {footerLinks.establishmentLaw.links.map((link, idx) => (
@@ -130,7 +160,7 @@ const Footer: React.FC = () => {
                   <Instagram size={20} />
                 </a>
                 <a href="https://accelerateconsulting.net/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-digital-green transition-colors">
-                  <XIcon size={20} />
+                  <Twitter size={20} />
                 </a>
                 <a href="https://accelerateconsulting.net/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-digital-green transition-colors">
                   <Linkedin size={20} />

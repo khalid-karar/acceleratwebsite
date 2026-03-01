@@ -1,7 +1,6 @@
 import React from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import PageHero from '../components/PageHero';
-import PageWrapper from '../components/PageWrapper';
 
 const Partnerships: React.FC = () => {
   const { lang } = useLanguage();
@@ -37,7 +36,7 @@ const Partnerships: React.FC = () => {
   ];
 
   return (
-    <PageWrapper>
+    <div className="min-h-screen">
       <PageHero
         title={lang === 'ar' ? 'شركاؤنا' : 'Partnerships'}
         backgroundImage="/images/partners-hero.jpg"
@@ -75,7 +74,7 @@ const Partnerships: React.FC = () => {
           </p>
         </section>
       </div>
-    </PageWrapper>
+    </div>
   );
 };
 

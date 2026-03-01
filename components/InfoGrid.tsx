@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { ChevronRight, ChevronLeft } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { pageContent } from '../content/pageContent';
-import { AcceleratText } from './AcceleratText';
 import { useLanguage } from '../context/LanguageContext';
 
 const InfoGrid: React.FC = () => {
@@ -15,8 +14,8 @@ const InfoGrid: React.FC = () => {
     {
       date: lang === 'ar' ? '19 يناير 2026' : 'January 19, 2026',
       headline: lang === 'ar' 
-        ? 'أكسيليريت تطلق منصة ACCELERAT 360 التشخيصية المدعومة بالذكاء الاصطناعي للسوق السعودي.'
-        : 'ACCELERAT launches AI-powered ACCELERAT 360 diagnostic platform for Saudi market.'
+        ? 'أكسيليريت تطلق منصة ACCELERAT 360° التشخيصية المدعومة بالذكاء الاصطناعي للسوق السعودي.'
+        : 'ACCELERAT launches AI-powered ACCELERAT 360° diagnostic platform for Saudi market.'
     },
     {
       date: lang === 'ar' ? '15 يناير 2026' : 'January 15, 2026',
@@ -75,7 +74,7 @@ const InfoGrid: React.FC = () => {
           </div>
         </div>
 
-        {/* Card 2: ACCELERAT 360 (Emerald) */}
+        {/* Card 2: ACCELERAT 360° (Emerald) */}
         <div className="bg-cyber-emerald flex flex-col h-[500px] text-white relative">
             
             {/* Top Section: Functions - Links to /accelerat-360 */}
@@ -84,10 +83,10 @@ const InfoGrid: React.FC = () => {
               className="flex-1 p-8 md:p-10 pb-0 flex flex-col cursor-pointer group/top hover:bg-white/5 transition-colors"
             >
                 <h4 className="text-xs font-bold text-white/80 uppercase tracking-[0.15em] mb-6">
-                  <AcceleratText text={content.cards.establishmentLaw.label} />
+                  {content.cards.establishmentLaw.label}
                 </h4>
                 <h3 className="text-3xl md:text-3xl lg:text-4xl font-normal leading-tight">
-                  <AcceleratText text={content.cards.establishmentLaw.title} />
+                  {content.cards.establishmentLaw.title}
                 </h3>
                 <div className={`mt-4 flex items-center gap-2 opacity-0 ${lang === 'ar' ? '-mr-4 group-hover/top:mr-0' : '-ml-4 group-hover/top:ml-0'} group-hover/top:opacity-100 transition-all duration-300`}>
                     <span className="text-sm font-bold uppercase tracking-wider">
@@ -131,7 +130,7 @@ const InfoGrid: React.FC = () => {
                className="py-4 first:pt-0 group/item cursor-pointer"
              >
                 <p className="text-gray-400 text-sm leading-relaxed mb-2 group-hover/item:text-white transition-colors">
-                  <AcceleratText text={content.cards.whatWeDo.intro} />
+                  {content.cards.whatWeDo.intro}
                 </p>
              </div>
              
@@ -181,7 +180,7 @@ const InfoGrid: React.FC = () => {
                   {newsItems[currentNewsIndex].date}
                 </p>
                 <h3 className="text-2xl md:text-3xl font-bold leading-tight hover:underline decoration-digital-green underline-offset-4 decoration-2">
-                  <AcceleratText text={newsItems[currentNewsIndex].headline} />
+                  {newsItems[currentNewsIndex].headline}
                 </h3>
             </div>
             
