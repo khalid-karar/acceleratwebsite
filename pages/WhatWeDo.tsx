@@ -14,7 +14,7 @@ const WhatWeDo: React.FC = () => {
         ? 'مراجعة شاملة للعمليات المالية وضمان الامتثال للمعايير واللوائح المعمول بها.'
         : 'Comprehensive review of financial operations ensuring compliance with applicable standards and regulations.',
       link: '/financial-audit',
-      color: 'from-cyber-emerald to-[#0a3d35]'
+      color: 'from-cyber-emerald to-gray-900'
     },
     {
       icon: BarChart3,
@@ -23,7 +23,7 @@ const WhatWeDo: React.FC = () => {
         ? 'تقييم فعالية وكفاءة العمليات والبرامج وتحديد فرص التحسين.'
         : 'Evaluating the effectiveness and efficiency of operations and programs, identifying improvement opportunities.',
       link: '/performance-audit',
-      color: 'from-[#1a1a2e] to-[#16213e]'
+      color: 'from-gray-900 to-black'
     },
     {
       icon: Monitor,
@@ -32,7 +32,7 @@ const WhatWeDo: React.FC = () => {
         ? 'تقييمات الأمن السيبراني ومراجعة أنظمة تقنية المعلومات والحوكمة الرقمية.'
         : 'Cybersecurity assessments, IT systems review, and digital governance evaluation.',
       link: '/digital-audit',
-      color: 'from-[#2d3436] to-[#1e272e]'
+      color: 'from-black to-gray-900'
     },
     {
       icon: GraduationCap,
@@ -41,16 +41,16 @@ const WhatWeDo: React.FC = () => {
         ? 'برامج تدريبية متقدمة في الحوكمة والمخاطر والامتثال والتدقيق.'
         : 'Advanced training programs in governance, risk management, compliance, and audit.',
       link: '/fa-academy',
-      color: 'from-[#0f4c75] to-[#1b262c]'
+      color: 'from-cyber-emerald to-black'
     },
     {
       icon: Lightbulb,
       title: lang === 'ar' ? 'الاستشارات والتقييمات' : 'Consulting & Assessments',
       description: lang === 'ar'
-        ? 'أكسيليريت 360 - أداة تقييم تشخيصية مدعومة بالذكاء الاصطناعي لقياس نضج المنظمة.'
+        ? 'أكسيليريت 360° - أداة تقييم تشخيصية مدعومة بالذكاء الاصطناعي لقياس نضج المنظمة.'
         : 'ACCELERAT 360° - AI-powered diagnostic assessment tool measuring organizational maturity.',
       link: '/consulting-assessments',
-      color: 'from-[#f07563] to-[#e85a4f]'
+      color: 'from-gray-800 to-black'
     },
     {
       icon: FileSearch,
@@ -59,7 +59,7 @@ const WhatWeDo: React.FC = () => {
         ? 'التحقيقات والغش، التحليلات المتقدمة، واستشارات الحوكمة والمخاطر والامتثال.'
         : 'Fraud investigations, advanced analytics, and GRC consulting services.',
       link: '/other-audit',
-      color: 'from-[#4a4e69] to-[#22223b]'
+      color: 'from-gray-900 to-cyber-emerald'
     }
   ];
 
@@ -133,7 +133,7 @@ const WhatWeDo: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 px-6 md:px-12 bg-gradient-to-r from-cyber-emerald to-[#0a3d35]">
+      <section className="py-16 px-6 md:px-12 bg-gradient-to-r from-cyber-emerald to-black">
         <div className="max-w-4xl mx-auto text-center text-white">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             {lang === 'ar' ? 'هل تحتاج إلى خدماتنا؟' : 'Need Our Services?'}

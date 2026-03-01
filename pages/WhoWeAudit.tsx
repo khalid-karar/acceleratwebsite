@@ -9,13 +9,13 @@ const WhoWeAudit: React.FC = () => {
 
   const sectorIcons = [
     { icon: Landmark, color: 'bg-cyber-emerald' },
-    { icon: Building2, color: 'bg-[#1a1a2e]' },
-    { icon: Heart, color: 'bg-[#e85a4f]' },
-    { icon: Home, color: 'bg-[#0f4c75]' },
-    { icon: Factory, color: 'bg-[#2d3436]' },
-    { icon: Radio, color: 'bg-[#4a4e69]' },
-    { icon: HardHat, color: 'bg-[#f07563]' },
-    { icon: Store, color: 'bg-[#1b262c]' }
+    { icon: Building2, color: 'bg-black' },
+    { icon: Heart, color: 'bg-gray-800' },
+    { icon: Home, color: 'bg-gray-900' },
+    { icon: Factory, color: 'bg-black' },
+    { icon: Radio, color: 'bg-cyber-emerald' },
+    { icon: HardHat, color: 'bg-gray-900' },
+    { icon: Store, color: 'bg-gray-800' }
   ];
 
   // Audit universe items matching FAA design
@@ -152,7 +152,7 @@ const WhoWeAudit: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 px-6 md:px-12 bg-gradient-to-r from-cyber-emerald to-[#0a3d35]">
+      <section className="py-16 px-6 md:px-12 bg-gradient-to-r from-cyber-emerald to-black">
         <div className="max-w-4xl mx-auto text-center text-white">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             {lang === 'ar' ? 'هل تحتاج إلى خدماتنا؟' : 'Need Our Audit Services?'}

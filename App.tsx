@@ -21,6 +21,7 @@ import Careers from './pages/Careers';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import FAQ from './pages/FAQ';
 import TermsConditions from './pages/TermsConditions';
+import WhoWeAudit from './pages/WhoWeAudit';
 
 // Scroll to top on route change
 const ScrollToTopOnNavigate: React.FC = () => {
@@ -98,7 +99,7 @@ const App: React.FC = () => {
         <ScrollToTopOnNavigate />
         <div className={`min-h-screen flex flex-col overflow-x-hidden transition-colors duration-300 ${lang === 'ar' ? 'font-arabic' : 'font-sans'} bg-gray-50 dark:bg-gray-900`}>
         {/* Header - Sticky & White Background for Branding */}
-        <div className="sticky top-0 z-50 bg-white dark:bg-[#002c23] shadow-md transition-colors duration-300">
+        <div className="sticky top-0 z-50 bg-white dark:bg-[#003F32] shadow-md transition-colors duration-300">
           <TopBar darkMode={darkMode} />
           <NavBar {...navProps} />
         </div>
@@ -113,6 +114,7 @@ const App: React.FC = () => {
             
             {/* All other pages - With Footer */}
             <Route path="/what-we-do" element={<WithFooter><WhatWeDo /></WithFooter>} />
+            <Route path="/who-we-audit" element={<WithFooter><WhoWeAudit /></WithFooter>} />
             <Route path="/advisory-services" element={<WithFooter><AdvisoryServices /></WithFooter>} />
             <Route path="/assurance-services" element={<WithFooter><AssuranceServices /></WithFooter>} />
             <Route path="/consulting-services" element={<WithFooter><ConsultingServices /></WithFooter>} />
