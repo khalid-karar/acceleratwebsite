@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
+import { Eye, Target } from 'lucide-react'; // <-- Imported professional icons here
 import { pageContent } from '../content/pageContent';
 import { AcceleratText } from '../components/AcceleratText';
 import { useLanguage } from '../context/LanguageContext';
@@ -115,8 +116,6 @@ const WhoWeAre: React.FC = () => {
               </p>
             </div>
 
-            {/* Removed WHO WE ARE / OUR TEAM / OUR COMMITMENT cards as requested */}
-
             <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-10 border border-cyber-emerald/20">
               <h3 className="text-2xl font-bold text-cyber-emerald dark:text-white mb-8 text-center">
                 {lang === 'ar' ? 'الجهات التي تم العمل معها من خلال خبراؤنا' : 'Entities that are served by our Talented resources and Qualified Experts'}
@@ -197,10 +196,11 @@ const WhoWeAre: React.FC = () => {
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+              {/* Vision Card */}
               <div className="bg-gradient-to-br from-cyber-emerald/10 to-transparent dark:from-digital-green/10 rounded-lg p-8 md:p-10 border border-cyber-emerald/20">
                 <div className="flex items-center gap-4 mb-6">
-                  <div className="w-14 h-14 md:w-16 md:h-16 bg-cyber-emerald dark:bg-digital-green rounded-full flex items-center justify-center flex-shrink-0">
-                    <span className="text-white text-2xl md:text-3xl">👁</span>
+                  <div className="w-14 h-14 md:w-16 md:h-16 bg-cyber-emerald dark:bg-digital-green rounded-full flex items-center justify-center flex-shrink-0 shadow-inner">
+                    <Eye className="text-white w-7 h-7 md:w-8 md:h-8" strokeWidth={2} />
                   </div>
                   <h3 className="text-2xl md:text-3xl font-bold text-cyber-emerald dark:text-white">
                     {missionContent.visionSection.title}
@@ -214,10 +214,11 @@ const WhoWeAre: React.FC = () => {
                 </p>
               </div>
 
+              {/* Mission Card */}
               <div className="bg-gradient-to-br from-cyber-emerald/10 to-transparent dark:from-digital-green/10 rounded-lg p-8 md:p-10 border border-cyber-emerald/20">
                 <div className="flex items-center gap-4 mb-6">
-                  <div className="w-14 h-14 md:w-16 md:h-16 bg-cyber-emerald dark:bg-digital-green rounded-full flex items-center justify-center flex-shrink-0">
-                    <span className="text-white text-2xl md:text-3xl">🎯</span>
+                  <div className="w-14 h-14 md:w-16 md:h-16 bg-cyber-emerald dark:bg-digital-green rounded-full flex items-center justify-center flex-shrink-0 shadow-inner">
+                    <Target className="text-white w-7 h-7 md:w-8 md:h-8" strokeWidth={2} />
                   </div>
                   <h3 className="text-2xl md:text-3xl font-bold text-cyber-emerald dark:text-white">
                     {missionContent.missionSection.title}
@@ -336,7 +337,7 @@ const WhoWeAre: React.FC = () => {
         </div>
 
         {/* Establishment Law Banner */}
-        <section className="bg-gradient-to-r from-cyber-emerald to-[#0a3d35] py-16">
+        <section className="bg-gradient-to-r from-cyber-emerald to-black py-16">
           <div className="max-w-7xl mx-auto px-6 text-center">
             <h3 className="text-3xl font-bold text-white mb-4">
               {lang === 'ar' ? 'التأسيس والترخيص' : 'Establishment & Licensing'}

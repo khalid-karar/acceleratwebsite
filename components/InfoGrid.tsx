@@ -99,7 +99,7 @@ const InfoGrid: React.FC = () => {
             {/* Bottom Section: Who We Serve - Links to /who-we-audit */}
             <div 
               onClick={() => navigate('/who-we-audit')}
-              className="bg-[#013626] p-8 md:p-10 pt-6 border-t border-white/10 cursor-pointer group/bottom hover:bg-[#002c23] transition-colors"
+              className="bg-black/20 p-8 md:p-10 pt-6 border-t border-white/10 cursor-pointer group/bottom hover:bg-black/40 transition-colors"
             >
                  <h4 className="text-xs font-bold text-white/80 uppercase tracking-[0.15em] mb-4">
                    {content.cards.establishmentLaw.whoWeAuditLabel}
@@ -116,7 +116,7 @@ const InfoGrid: React.FC = () => {
         </div>
 
         {/* Card 3: What We Do (Black/Dark) */}
-        <div className="bg-[#111] dark:bg-black p-8 md:p-10 flex flex-col h-[500px] text-white">
+        <div className="bg-black p-8 md:p-10 flex flex-col h-[500px] text-white">
           <h4 
             onClick={() => navigate('/what-we-do')}
             className="text-xs font-bold text-white/50 uppercase tracking-[0.15em] mb-8 cursor-pointer hover:text-white transition-colors"
@@ -168,9 +168,9 @@ const InfoGrid: React.FC = () => {
           </div>
         </div>
 
-        {/* Card 4: News (Blue-Gray) - Links to /news-events */}
+        {/* Card 4: News (Gray to Black) - Links to /news-events */}
         <div 
-          className="bg-[#5F716F] p-8 md:p-10 flex flex-col justify-between h-[500px] text-white relative cursor-pointer hover:bg-[#4d5e5c] transition-colors"
+          className="bg-gray-900 p-8 md:p-10 flex flex-col justify-between h-[500px] text-white relative cursor-pointer hover:bg-black transition-colors"
         >
             <div onClick={() => navigate('/news-events')}>
                 <h4 className="text-xs font-bold text-white/70 uppercase tracking-[0.15em] mb-8">
@@ -191,7 +191,7 @@ const InfoGrid: React.FC = () => {
                     e.stopPropagation();
                     prevNews();
                   }}
-                  className="w-10 h-10 rounded-full bg-black/20 flex items-center justify-center hover:bg-digital-green hover:text-cyber-emerald transition-colors backdrop-blur-sm"
+                  className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-digital-green hover:text-cyber-emerald transition-colors backdrop-blur-sm"
                   aria-label={lang === 'ar' ? 'الخبر السابق' : 'Previous news'}
                 >
                     <ChevronLeft size={18} />
@@ -201,7 +201,7 @@ const InfoGrid: React.FC = () => {
                     e.stopPropagation();
                     nextNews();
                   }}
-                  className="w-10 h-10 rounded-full bg-black/20 flex items-center justify-center hover:bg-digital-green hover:text-cyber-emerald transition-colors backdrop-blur-sm"
+                  className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-digital-green hover:text-cyber-emerald transition-colors backdrop-blur-sm"
                   aria-label={lang === 'ar' ? 'الخبر التالي' : 'Next news'}
                 >
                     <ChevronRight size={18} />

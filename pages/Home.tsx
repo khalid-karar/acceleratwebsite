@@ -1,7 +1,5 @@
 import React from 'react';
-import { Instagram, Linkedin, ArrowRight } from 'lucide-react';
-import XIcon from '../components/XIcon';
-import { AcceleratText } from '../components/AcceleratText';
+import { Instagram, Twitter, Linkedin, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 
@@ -20,7 +18,7 @@ const Home: React.FC = () => {
         cta: "READ MORE"
       },
       accelerat360: {
-        label: "ACCELERAT 360",
+        label: "ACCELERAT 360°",
         title: "AI-Powered Diagnostic Platform",
         description: "Comprehensive GRC assessment tool powered by artificial intelligence for governance, risk, and compliance excellence.",
         cta: "LEARN MORE"
@@ -53,7 +51,7 @@ const Home: React.FC = () => {
       newsEvents: {
         label: "NEWS AND EVENTS",
         date: "January 19, 2026",
-        headline: "ACCELERAT launches AI-powered ACCELERAT 360 diagnostic platform for Saudi market."
+        headline: "ACCELERAT launches AI-powered ACCELERAT 360° diagnostic platform for Saudi market."
       }
     },
     ar: {
@@ -100,7 +98,7 @@ const Home: React.FC = () => {
       newsEvents: {
         label: "الأخبار والفعاليات",
         date: "19 يناير 2026",
-        headline: "أكسيليريت تطلق منصة ACCELERAT 360 التشخيصية المدعومة بالذكاء الاصطناعي للسوق السعودي."
+        headline: "أكسيليريت تطلق منصة ACCELERAT 360° التشخيصية المدعومة بالذكاء الاصطناعي للسوق السعودي."
       }
     }
   };
@@ -143,7 +141,7 @@ const Home: React.FC = () => {
                     <Instagram size={24} />
                   </a>
                   <a href="#" className="hover:text-cyber-emerald transition-colors">
-                    <XIcon size={24} />
+                    <Twitter size={24} />
                   </a>
                   <a href="#" className="hover:text-cyber-emerald transition-colors">
                     <Linkedin size={24} />
@@ -190,7 +188,7 @@ const Home: React.FC = () => {
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           
           {/* Card 1: Who We Are */}
-          <div className="bg-gradient-to-br from-cyber-emerald to-[#0a3d35] text-white rounded-lg p-8 flex flex-col justify-between hover:shadow-lg transition-all duration-300">
+          <div className="bg-cyber-emerald text-white rounded-lg p-8 flex flex-col justify-between hover:shadow-lg transition-all duration-300">
             <div>
               <p className="text-xs font-semibold tracking-widest opacity-70 mb-4">
                 {c.whoWeAre.label}
@@ -206,7 +204,7 @@ const Home: React.FC = () => {
 
           {/* Card 2: ACCELERAT 360 (Split) */}
           <div className="flex flex-col gap-0">
-            <Link to="/accelerat-360" className="bg-gradient-to-br from-[#1a1a2e] to-[#16213e] text-white rounded-t-lg p-8 flex-1 hover:from-[#252550] hover:to-[#1a2a4e] transition-all">
+            <Link to="/accelerat-360" className="bg-black text-white rounded-t-lg p-8 flex-1 hover:bg-gray-900 transition-all">
               <p className="text-xs font-semibold tracking-widest opacity-70 mb-4">
                 {c.accelerat360.label}
               </p>
@@ -217,7 +215,7 @@ const Home: React.FC = () => {
                 {c.accelerat360.description}
               </p>
             </Link>
-            <div className="bg-gradient-to-br from-cyber-emerald to-[#0a3d35] text-white rounded-b-lg p-8">
+            <div className="bg-cyber-emerald border-t border-white/10 text-white rounded-b-lg p-8">
               <p className="text-xs font-semibold tracking-widest opacity-70 mb-3">
                 {c.whoWeServe.label}
               </p>
@@ -247,7 +245,7 @@ const Home: React.FC = () => {
                   <p className="text-xs opacity-70 mb-2">
                     {service.subtitle}
                   </p>
-                  <span className="text-lg font-bold text-cyber-emerald hover:text-[#f07563] transition-colors">
+                  <span className="text-lg font-bold text-cyber-emerald hover:text-digital-green transition-colors">
                     ›
                   </span>
                 </Link>
@@ -256,7 +254,7 @@ const Home: React.FC = () => {
           </div>
 
           {/* Card 4: News & Events */}
-          <div className="bg-gradient-to-br from-gray-800 to-gray-900 text-white rounded-lg p-8 flex flex-col justify-between">
+          <div className="bg-gray-900 text-white rounded-lg p-8 flex flex-col justify-between">
             <div>
               <p className="text-xs font-semibold tracking-widest opacity-70 mb-4">
                 {c.newsEvents.label}

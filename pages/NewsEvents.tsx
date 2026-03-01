@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
-import { Calendar, ArrowRight, Filter, Instagram, Linkedin } from 'lucide-react';
-import XIcon from '../components/XIcon';
-import { AcceleratText } from '../components/AcceleratText';
+import { Calendar, ArrowRight, Filter, Instagram, Twitter, Linkedin } from 'lucide-react';
 import { pageContent2 } from '../content/pageContent2';
 import { useLanguage } from '../context/LanguageContext';
 
@@ -17,8 +15,8 @@ const NewsEvents: React.FC = () => {
       id: 1,
       category: 'company',
       title: lang === 'ar' 
-        ? 'أكسيليريت تطلق منصة ACCELERAT 360 التشخيصية المدعومة بالذكاء الاصطناعي'
-        : 'ACCELERAT Launches AI-Powered ACCELERAT 360 Diagnostic Platform',
+        ? 'أكسيليريت تطلق منصة ACCELERAT 360° التشخيصية المدعومة بالذكاء الاصطناعي'
+        : 'ACCELERAT Launches AI-Powered ACCELERAT 360° Diagnostic Platform',
       description: lang === 'ar'
         ? 'منصة تقييم متقدمة تقيس نضج المنظمة وتوفر رؤى شاملة'
         : 'Advanced assessment platform measuring organizational maturity and providing comprehensive insights',
@@ -165,7 +163,7 @@ const NewsEvents: React.FC = () => {
                       <span>{new Date(sortedNews[0].date).toLocaleDateString(lang === 'ar' ? 'ar-SA' : 'en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
                     </div>
                     <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-cyber-emerald transition-colors">
-                      <AcceleratText text={sortedNews[0].title} />
+                      {sortedNews[0].title}
                     </h3>
                     <p className="text-gray-600 dark:text-gray-400 mb-4">{sortedNews[0].description}</p>
                     <a href="#" className="inline-flex items-center gap-2 text-cyber-emerald dark:text-digital-green font-semibold hover:gap-4 transition-all">
@@ -193,7 +191,7 @@ const NewsEvents: React.FC = () => {
                         <span>{new Date(news.date).toLocaleDateString(lang === 'ar' ? 'ar-SA' : 'en-US', { year: 'numeric', month: 'short', day: 'numeric' })}</span>
                       </div>
                       <h4 className="font-bold text-gray-900 dark:text-white mb-2 group-hover:text-cyber-emerald transition-colors line-clamp-2">
-                        <AcceleratText text={news.title} />
+                        {news.title}
                       </h4>
                       <a href="#" className="text-sm text-cyber-emerald dark:text-digital-green font-semibold">
                         {lang === 'ar' ? 'اقرأ المزيد' : 'Read More'} →
@@ -225,8 +223,8 @@ const NewsEvents: React.FC = () => {
 
             <div className="bg-white dark:bg-gray-800 rounded-lg p-6 shadow">
               <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
-                <XIcon size={20} className="text-blue-400" />
-                {lang === 'ar' ? 'تابعنا على إكس' : 'X Feed'}
+                <Twitter size={20} className="text-blue-400" />
+                {lang === 'ar' ? 'تابعنا على تويتر' : 'Twitter Feed'}
               </h3>
               <a 
                 href="https://accelerateconsulting.net/" 
@@ -249,12 +247,12 @@ const NewsEvents: React.FC = () => {
                 rel="noopener noreferrer"
                 className="text-cyber-emerald dark:text-digital-green hover:underline"
               >
-                <span className="font-bold italic">ACCELERAT</span> Consulting
+                ACCELERAT Consulting
               </a>
             </div>
 
             {/* Newsletter */}
-            <div className="bg-gradient-to-br from-cyber-emerald to-[#0a3d35] rounded-lg p-6 text-white">
+            <div className="bg-gradient-to-br from-cyber-emerald to-black rounded-lg p-6 text-white">
               <h3 className="text-lg font-bold mb-4">
                 {content.newsletter.title}
               </h3>

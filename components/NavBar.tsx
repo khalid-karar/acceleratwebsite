@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, Moon, Sun, Monitor, X, ChevronDown, Instagram, Twitter, Linkedin, Volume2, StopCircle, ArrowRight } from 'lucide-react';
+import { Menu, Moon, Sun, Monitor, X, Instagram, Twitter, Linkedin, Volume2, StopCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { menuTranslations } from '../content/menuTranslations';
 
@@ -18,14 +18,12 @@ const NavBar: React.FC<NavBarProps> = ({
   darkMode, toggleDarkMode, lang, toggleLang, zoomIn, zoomOut, isSpeaking, toggleTTS 
 }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isLangDropdownOpen, setIsLangDropdownOpen] = useState(false);
   const t = menuTranslations[lang];
 
   // Lock body scroll when menu is open
   useEffect(() => {
     if (isMenuOpen) {
       document.body.style.overflow = 'hidden';
-      setIsLangDropdownOpen(false);
     } else {
       document.body.style.overflow = 'unset';
     }
@@ -56,38 +54,31 @@ const NavBar: React.FC<NavBarProps> = ({
 
           {/* Right: Utilities */}
           <div className="flex items-center gap-6 text-sm font-medium">
-            <div className="relative">
-              <button 
-                onClick={() => setIsLangDropdownOpen(!isLangDropdownOpen)}
-                className="flex items-center gap-1 hover:text-shiny-red transition-colors font-bold tracking-wider"
-              >
-                <span>{lang === 'en' ? 'EN' : 'عربي'}</span>
-                <ChevronDown size={16} className={`transition-transform ${isLangDropdownOpen ? 'rotate-180' : ''}`} />
-              </button>
+            
+            {/* NEW: Visual Pill Language Toggle */}
+            <button 
+              onClick={toggleLang}
+              className="relative flex items-center w-14 h-7 rounded-full bg-cyber-emerald/10 dark:bg-white/10 cursor-pointer border border-cyber-emerald/20 dark:border-white/20 hover:border-cyber-emerald/40 dark:hover:border-white/40 transition-colors"
+              aria-label="Toggle Language"
+              dir="ltr" /* Forces the toggle to stay physical LTR even in Arabic mode */
+            >
+              {/* Sliding Puck */}
+              <div 
+                className={`absolute left-1 top-1 bottom-1 w-6 bg-cyber-emerald dark:bg-digital-green rounded-full shadow-sm transition-transform duration-300 ease-in-out ${
+                  lang === 'ar' ? 'translate-x-6' : 'translate-x-0'
+                }`}
+              ></div>
               
-              {isLangDropdownOpen && (
-                <div className="absolute right-0 mt-2 w-32 bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-cyber-emerald/20 z-50">
-                  <button
-                    onClick={() => {
-                      if (lang !== 'en') toggleLang();
-                      setIsLangDropdownOpen(false);
-                    }}
-                    className={`w-full text-left px-4 py-2 hover:bg-cyber-emerald/10 transition-colors ${lang === 'en' ? 'text-cyber-emerald font-bold' : 'text-gray-700 dark:text-gray-300'}`}
-                  >
-                    English
-                  </button>
-                  <button
-                    onClick={() => {
-                      if (lang !== 'ar') toggleLang();
-                      setIsLangDropdownOpen(false);
-                    }}
-                    className={`w-full text-left px-4 py-2 hover:bg-cyber-emerald/10 transition-colors ${lang === 'ar' ? 'text-cyber-emerald font-bold' : 'text-gray-700 dark:text-gray-300'}`}
-                  >
-                    عربي
-                  </button>
-                </div>
-              )}
-            </div>
+              {/* Labels */}
+              <div className="relative z-10 flex w-full items-center text-[10px] font-bold pointer-events-none mt-[1px]">
+                <span className={`flex-1 text-center transition-colors duration-300 ${lang === 'en' ? 'text-white dark:text-cyber-emerald' : 'text-cyber-emerald dark:text-white'}`}>
+                  EN
+                </span>
+                <span className={`flex-1 text-center transition-colors duration-300 ${lang === 'ar' ? 'text-white dark:text-cyber-emerald' : 'text-cyber-emerald dark:text-white'}`}>
+                  AR
+                </span>
+              </div>
+            </button>
 
             <div className="flex items-center gap-4 opacity-90">
                <button 
@@ -154,10 +145,29 @@ const NavBar: React.FC<NavBarProps> = ({
                 
                 {/* Top Right Utilities */}
                 <div className="flex justify-end p-8 md:p-12 gap-8 text-sm font-medium text-gray-400">
-                    <button onClick={toggleLang} className="flex items-center gap-1 hover:text-digital-green transition-colors">
-                        <span>{lang === 'en' ? 'EN' : 'عربي'}</span>
-                        <ChevronDown size={14} />
+                    
+                    {/* NEW: Visual Pill Language Toggle (Mobile Menu) */}
+                    <button 
+                      onClick={toggleLang}
+                      className="relative flex items-center w-14 h-7 rounded-full bg-white/10 cursor-pointer border border-white/20 hover:border-digital-green/50 transition-colors"
+                      aria-label="Toggle Language"
+                      dir="ltr"
+                    >
+                      <div 
+                        className={`absolute left-1 top-1 bottom-1 w-6 bg-digital-green rounded-full shadow-sm transition-transform duration-300 ease-in-out ${
+                          lang === 'ar' ? 'translate-x-6' : 'translate-x-0'
+                        }`}
+                      ></div>
+                      <div className="relative z-10 flex w-full items-center text-[10px] font-bold pointer-events-none mt-[1px]">
+                        <span className={`flex-1 text-center transition-colors duration-300 ${lang === 'en' ? 'text-cyber-emerald' : 'text-white'}`}>
+                          EN
+                        </span>
+                        <span className={`flex-1 text-center transition-colors duration-300 ${lang === 'ar' ? 'text-cyber-emerald' : 'text-white'}`}>
+                          AR
+                        </span>
+                      </div>
                     </button>
+
                     <button onClick={toggleDarkMode} className="hover:text-digital-green transition-colors">
                         {darkMode ? <Sun size={18} /> : <Moon size={18} />}
                     </button>
