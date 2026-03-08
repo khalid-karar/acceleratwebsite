@@ -242,7 +242,7 @@ const NewsEvents: React.FC = () => {
                 {lang === 'ar' ? 'تابعنا على لينكدإن' : 'LinkedIn'}
               </h3>
               <a 
-                href="https://accelerateconsulting.net/" 
+                href="https://www.linkedin.com/company/accelerat/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-cyber-emerald dark:text-digital-green hover:underline"

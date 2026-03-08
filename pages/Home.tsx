@@ -137,13 +137,7 @@ const Home: React.FC = () => {
                   {c.connectLabel}
                 </p>
                 <div className="flex gap-4">
-                  <a href="#" className="hover:text-cyber-emerald transition-colors">
-                    <Instagram size={24} />
-                  </a>
-                  <a href="#" className="hover:text-cyber-emerald transition-colors">
-                    <Twitter size={24} />
-                  </a>
-                  <a href="#" className="hover:text-cyber-emerald transition-colors">
+                  <a href="https://www.linkedin.com/company/accelerat/" target="_blank" rel="noopener noreferrer" className="hover:text-cyber-emerald transition-colors">
                     <Linkedin size={24} />
                   </a>
                 </div>

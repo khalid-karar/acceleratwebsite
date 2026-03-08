@@ -98,23 +98,33 @@ const ContactUs: React.FC = () => {
                 </div>
 
                 {/* Phone Item - NEW NUMBER ADDED HERE */}
-                <div className="flex items-start gap-4 mb-6">
-                  <div className="p-3 bg-cyber-emerald/10 rounded-lg shrink-0">
-                    <Phone className="w-6 h-6 text-cyber-emerald" />
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-gray-900 dark:text-white mb-1">
-                      {lang === 'ar' ? 'اتصل بنا' : 'Call Us'}
-                    </h4>
-                    <a 
-                      href="tel:0555388824" 
-                      dir="ltr" 
-                      className="text-sm text-gray-600 dark:text-gray-300 hover:text-cyber-emerald transition-colors font-medium block"
-                    >
-                      0555388824
-                    </a>
-                  </div>
-                </div>
+                {/* Phone Item */}
+<div className="flex items-start gap-4 mb-6">
+  <div className="p-3 bg-cyber-emerald/10 rounded-lg shrink-0">
+    <Phone className="w-6 h-6 text-cyber-emerald" />
+  </div>
+  <div>
+    <h4 className="font-bold text-gray-900 dark:text-white mb-1">
+      {lang === 'ar' ? 'اتصل بنا' : 'Call Us'}
+    </h4>
+
+    <a
+      href="tel:+966509193366"
+      dir="ltr"
+      className="text-sm text-gray-600 dark:text-gray-300 hover:text-cyber-emerald transition-colors font-medium block"
+    >
+      +966 50 919 3366
+    </a>
+
+    <a
+      href="tel:+966555388824"
+      dir="ltr"
+      className="text-sm text-gray-600 dark:text-gray-300 hover:text-cyber-emerald transition-colors font-medium block mt-1"
+    >
+      +966 55 538 8824 
+    </a>
+  </div>
+</div>
 
                 {/* Email Item */}
                 <div className="flex items-start gap-4">

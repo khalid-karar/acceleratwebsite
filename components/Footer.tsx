@@ -156,13 +156,7 @@ const Footer: React.FC = () => {
                 {lang === 'ar' ? 'تواصل' : 'Connect'}
               </h4>
               <div className="flex gap-4">
-                <a href="https://accelerateconsulting.net/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-digital-green transition-colors">
-                  <Instagram size={20} />
-                </a>
-                <a href="https://accelerateconsulting.net/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-digital-green transition-colors">
-                  <Twitter size={20} />
-                </a>
-                <a href="https://accelerateconsulting.net/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-digital-green transition-colors">
+                  <a href="https://www.linkedin.com/company/accelerat/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-digital-green transition-colors">
                   <Linkedin size={20} />
                 </a>
               </div>

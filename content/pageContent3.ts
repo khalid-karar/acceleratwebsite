@@ -67,8 +67,8 @@ export const pageContent3 = {
           a: "We provide comprehensive consulting, audit and assurance services including: digital strategy design, operational excellence, innovation and growth programmes, strategy implementation, and audit, review and assurance services."
         },
         {
-          q: "What is ACCELERAT 360?",
-          a: "ACCELERAT 360 is an advanced diagnostic assessment tool powered by artificial intelligence. It measures organisational maturity, evaluates internal control effectiveness, provides governance, risk and compliance system insights and benchmarks against global best practices."
+          q: "What is ACCELERAT 360°?",
+          a: "ACCELERAT 360° is an advanced diagnostic assessment tool powered by artificial intelligence. It measures organisational maturity, evaluates internal control effectiveness, provides governance, risk and compliance system insights and benchmarks against global best practices."
         },
         {
           q: "What sectors do you serve?",
@@ -96,7 +96,7 @@ export const pageContent3 = {
         },
         {
           q: "How does artificial intelligence enhance your services?",
-          a: "We use AI in: big data analysis, pattern and anomaly detection, ACCELERAT 360, cybersecurity assessments, and advanced forecasting and analytics."
+          a: "We use AI in: big data analysis, pattern and anomaly detection, ACCELERAT 360°, cybersecurity assessments, and advanced forecasting and analytics."
         },
         {
           q: "What languages do you support?",

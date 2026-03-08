@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-// 1. You can delete or comment out the old Logo import!
-// import Logo from './Logo'; 
+
 
 interface TopBarProps {
   darkMode?: boolean;
