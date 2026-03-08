@@ -235,8 +235,6 @@ const NavBar: React.FC<NavBarProps> = ({
                         <a href="#" className="hover:text-white transition-colors">{t.sitemap}</a>
                     </div>
                     <div className="flex gap-8 text-gray-400">
-                        <Instagram size={20} className="hover:text-digital-green cursor-pointer transition-colors" />
-                        <Twitter size={20} className="hover:text-digital-green cursor-pointer transition-colors" />
                         <Linkedin size={20} className="hover:text-digital-green cursor-pointer transition-colors" />
                     </div>
                 </div>
